@@ -6,6 +6,7 @@ from functools import partial
 import bluesky.plans as bp
 import matplotlib.pyplot as plt
 import numpy as np
+from bact2.bluesky.live_plot import orbit_plots
 # to be replaced by a proper reimplementation
 # from bact2.ophyd.devices.raw import multiplexer
 from bact2.ophyd.utils.preprocessors.CounterSink import CounterSink
@@ -44,14 +45,42 @@ def main(*, try_run=False, prefix=""):
         ],
         default_prec=10
     )
+    bpm_read = bpm_devs.read()
+    plot_data = [[bpm_data[plane]['pos_raw'] for plane in ("x", "y")]
+                 for bpm_data in bpm_read["bpm_elem_data"]['value']]
+    plot_data = np.array(plot_data)
+    # a test plot
+    fig, test_ax = plt.subplots(2, 1, sharex=True)
+    ax_x, ax_y = test_ax
+    pscale = 1000
+    ax_x.plot(plot_data[:,0] * pscale)
+    ax_y.plot(plot_data[:,1] * pscale)
+    ax_x.set_label("x [mm]")
+    ax_y.set_label("y [mm]")
 
-    # lp = orbit_plots.plots(magnet_name=mux.selected_multiplexer.selected.name,
-    #                        ds=bpm_devs.ds.name,
-    #                        # ds = bpm_devs.x.pos_raw.name,
-    #                        x_pos=bpm_devs.x.pos.name,
-    #                        y_pos=bpm_devs.y.pos.name,
-    #                        reading_count=cs.setpoint.name,
-    #                        )
+    # # Iterate over the elements in your array and collect the data
+    # for elem in bpm_read["bpm_elem_data"]['value']:
+    #     x_pos = elem['x']['pos_raw']
+    #     # Add the data to the plot_data list
+    #     plot_data.append((x_pos, y_pos))
+    # # Plot the data from the array
+    # lplt = plt.plot(plot_data)
+    # plot_list = []
+    # for elem in bpm_read["bpm_elem_data"]['value']:
+    plot = orbit_plots.plots(magnet_name=mux.selected_multiplexer.setpoint.name,
+                             ds=None,
+                             x_pos="/".join(["bpm_elem_data", "x"]),
+                             y_pos="/".join(["bpm_elem_data", "y"]),
+                             # x_pos=["bpm_elem_data", "value", "x", "pos_raw"],
+                             #y_pos=["bpm_elem_data", "value", "y", "pos_raw"],
+                             reading_count=cs.setpoint.name
+    )
+    #    plot = orbit_plots.plots(magnet_name=None,
+    #                          ds=elem['name'],
+    #                          x_pos=elem['x']['pos_raw'],
+    #                          y_pos=elem['y']['pos_raw'],
+    #                          reading_count=cs.setpoint.name)
+    #     plot_list.append(plot)
 
     if not mux.connected:
         mux.wait_for_connection()
@@ -62,9 +91,9 @@ def main(*, try_run=False, prefix=""):
     cyc_currents = cycler(mux.power_converter, currents)
     cyc_count = cycler(cs, range(3))
     cmd = partial(bp.scan_nd, [bpm_devs], cyc_magnets * cyc_currents * cyc_count)
-    cbs = [lt]  # + lp
+    cbs = [lt ] + plot  # + lp
 
-    db = catalog["heavy"]
+    db = catalog["heavy_local"]
 
     md = dict(machine="BessyII", nickname="bba", measurement_target="beam_based_alignment",
               target="beam based alignemnt test",
