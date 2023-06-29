@@ -31,6 +31,8 @@ def main(*, try_run=False, prefix=""):
     cs = CounterSink(name="cs")
 
     quad_names = mux.get_element_names()
+    # test hack ...
+    quad_names = ["q3m2t8r"]
     if try_run:
         quad_names = quad_names[:2]
     lt = LiveTable(
@@ -87,7 +89,7 @@ def main(*, try_run=False, prefix=""):
     print(mux.describe())
 
     cyc_magnets = cycler(mux.selected_multiplexer, quad_names)
-    currents = np.array([0, -1, 0, 1, 0]) * 5e-1
+    currents = np.array([0, -1, 0, 1, 0]) * 5
     cyc_currents = cycler(mux.power_converter, currents)
     cyc_count = cycler(cs, range(3))
     cmd = partial(bp.scan_nd, [bpm_devs], cyc_magnets * cyc_currents * cyc_count)
