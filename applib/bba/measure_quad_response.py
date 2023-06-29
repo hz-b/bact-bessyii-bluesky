@@ -6,15 +6,13 @@ from functools import partial
 import bluesky.plans as bp
 import matplotlib.pyplot as plt
 import numpy as np
-from bact2.bluesky.live_plot import orbit_plots
 # to be replaced by a proper reimplementation
-# from bact2.ophyd.devices.raw import multiplexer
 from bact2.ophyd.utils.preprocessors.CounterSink import CounterSink
 from bluesky import RunEngine
 from bluesky.callbacks import LiveTable
 from cycler import cycler
 from databroker import catalog
-
+from custom.bessyii.bluesky.live_plot import orbit_plots
 from custom.bessyii.ophyd.bact_bessy_ophyd.devices.pp import bpm, multiplexer
 
 
