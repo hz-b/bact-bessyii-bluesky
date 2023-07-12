@@ -5,9 +5,11 @@ These plots update on every new data the whole line
 
 import numpy as np
 from collections.abc import Sequence
+import logging
 # from bact2.bluesky.hacks.callbacks import LivePlot
 from bluesky.callbacks import LivePlot as BlueskyLivePlot
 
+logger = logging.getLogger("bact")
 
 def name_or_root_of_path(txt: str) -> str:
     if '/' in txt:
@@ -53,6 +55,17 @@ class LivePlot(BlueskyLivePlot):
 
 
 class PlotLine(LivePlot):
+    def __init__(self, *args, **kwargs):
+        self.x_scale = kwargs.pop("x_scale", 1.0)
+        self.y_scale = kwargs.pop("y_scale", 1.0)
+        super().__init__(*args, **kwargs)
+
+    def scale_data(self, x, y):
+        xs = np.asarray(x) * self.x_scale
+        ys = np.asarray(y) * self.y_scale
+        if type(x) == type([]): xs = xs.tolist()
+        if type(y) == type([]): ys = ys.tolist()
+        return xs, ys
 
     def doc_to_bpmdata(self, x, y):
         bpm_data = bpm_data_to_plot_data(y)
@@ -77,7 +90,8 @@ class PlotLine(LivePlot):
     def update_caches_top_part(self, x, y):
         """Convert doc to arrays
         """
-        return self.doc_to_bpmdata(x, y)
+        x, y = self.doc_to_bpmdata(x, y)
+        return self.scale_data(x, y)
 
     def update_caches_bottom_part(self, xa, ya):
         """Store arrays compatible to bluesky liveplot expecectations
@@ -99,10 +113,17 @@ class Offset:
         self.clearOffset()
 
     def clearOffset(self):
+        logger.warning("Clearing offset")
         self.old_value = None
 
-    def set_ref_value(self, ref):
-        self.old_value = np.asarray(ref)
+    def set_ref_value_if_none_known(self, ref):
+        """only set a reference value if None exists
+
+        this way it can be periodically called even if
+        the reference value is not
+        """
+        if self.old_value is None:
+            self.old_value = np.asarray(ref)
         
     def update_caches(self, x: np.ndarray, y:np.ndarray):
         # Scale to kHz
@@ -121,7 +142,7 @@ class PlotLineOffset(PlotLine):
         xa, ya = self.update_caches_top_part(x, y)
         xa, dya = self.offset.update_caches(xa, ya)
         self.update_caches_bottom_part(xa, dya)
-        self.offset.set_ref_value(ya)
+        self.offset.set_ref_value_if_none_known(ya)
 
 
 class PlotLineVsIndex(LivePlot):
@@ -149,4 +170,4 @@ class PlotLineVsIndexOffset(PlotLineVsIndex):
         xa, ya = self.update_caches_top_part()
         xa, dya = self.offset.update_caches(xa, ya)
         self.update_caches_bottom_part(xa, dya)
-        self.offset.set_ref_value(ya)
+        self.offset.set_ref_value_if_none_known(ya)
