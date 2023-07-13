@@ -97,14 +97,14 @@ def main(*, try_run=False, prefix=""):
     cmd = partial(bp.scan_nd, [bpm_devs], cyc_magnets * cyc_currents * cyc_count)
     cbs = [lt ] + plot  # + lp
 
-    # db = catalog["heavy_local"]
+    db = catalog["heavy_local"]
 
     md = dict(machine="BessyII", nickname="bba", measurement_target="beam_based_alignment",
               target="beam based alignemnt test",
               comment="currently only testing if data taking works"
               )
     RE = RunEngine(md)
-    # RE.subscribe(db.v1.insert)
+    RE.subscribe(db.v1.insert)
 
     # hidden side effect: I guess a run engine must exist to be able to use that?
     # see that limits are implemented in the digital twin
