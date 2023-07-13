@@ -1,0 +1,17 @@
+[build-system]
+requires = [ "poetry-core>=1.0.0",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "bact_bessyii_bluesky"
+version = "0.0.1"
+description = "BACT bluesky developments for the BESSY II storage ring"
+authors = ["Waheedullah Sulaiman Khail", "Pierre Schnizer"]
+license = "GPL-3.0"
+homepage = ""
+repository = "https://github.com/hz-b/bact-bessyii-bluesky"
+keywords = []
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.11"
+ophyd  = ">=1.5"

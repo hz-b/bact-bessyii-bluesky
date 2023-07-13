@@ -1,0 +1,9 @@
+numpy
+poetry
+matplotlib
+bluesky<1.11
+databroker
+cycler
+
+# dedicated bact packages
+bact_bessyii_ophyd
