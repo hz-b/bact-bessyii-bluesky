@@ -1,6 +1,8 @@
 """measure quadrupole response: for BESSY II
 
 """
+import matplotlib
+matplotlib.use('QtCairo')
 from functools import partial
 
 import bluesky.plans as bp
@@ -19,8 +21,6 @@ from custom.bessyii.ophyd.bact_bessy_ophyd.devices.pp import bpm, multiplexer
 def main(*, try_run=False, prefix=""):
     # BESSSY II ...
     bpm_devs = bpm.BPM(prefix + "MDIZ2T5G", name="bpm")
-    bpm_devs.describe()
-    bpm_devs.read()
     # BESSY II needs the hardware multiplexer ...
     mux = multiplexer.Multiplexer(prefix=prefix, name="mux")
     # MLS has separate power converters these are collected as a software device
@@ -32,7 +32,7 @@ def main(*, try_run=False, prefix=""):
 
     quad_names = mux.get_element_names()
     # test hack ...
-    quad_names = ["q3m2t8r", "q1m2t8r"]
+    quad_names = ["q3m2t8r"]
     if try_run:
         quad_names = quad_names[:2]
     lt = LiveTable(
@@ -47,18 +47,19 @@ def main(*, try_run=False, prefix=""):
         ],
         default_prec=10
     )
-    bpm_read = bpm_devs.read()
-    plot_data = [[bpm_data[plane]['pos_raw'] for plane in ("x", "y")]
-                 for bpm_data in bpm_read["bpm_elem_data"]['value']]
-    plot_data = np.array(plot_data)
-    # a test plot
-    fig, test_ax = plt.subplots(2, 1, sharex=True)
-    ax_x, ax_y = test_ax
-    pscale = 1000
-    ax_x.plot(plot_data[:,0] * pscale)
-    ax_y.plot(plot_data[:,1] * pscale)
-    ax_x.set_label("x [mm]")
-    ax_y.set_label("y [mm]")
+    if False:
+        bpm_read = bpm_devs.read()
+        plot_data = [[bpm_data[plane]['pos_raw'] for plane in ("x", "y")]
+                     for bpm_data in bpm_read["bpm_elem_data"]['value']]
+        plot_data = np.array(plot_data)
+        # a test plot
+        fig, test_ax = plt.subplots(2, 1, sharex=True)
+        ax_x, ax_y = test_ax
+        pscale = 1000
+        ax_x.plot(plot_data[:,0] * pscale)
+        ax_y.plot(plot_data[:,1] * pscale)
+        ax_x.set_label("x [mm]")
+        ax_y.set_label("y [mm]")
 
     # # Iterate over the elements in your array and collect the data
     # for elem in bpm_read["bpm_elem_data"]['value']:
@@ -73,6 +74,7 @@ def main(*, try_run=False, prefix=""):
                              ds=None,
                              x_pos="/".join(["bpm_elem_data", "x"]),
                              y_pos="/".join(["bpm_elem_data", "y"]),
+                             y_scale = 1e6,
                              # x_pos=["bpm_elem_data", "value", "x", "pos_raw"],
                              #y_pos=["bpm_elem_data", "value", "y", "pos_raw"],
                              reading_count=cs.setpoint.name
@@ -89,21 +91,20 @@ def main(*, try_run=False, prefix=""):
     print(mux.describe())
 
     cyc_magnets = cycler(mux.selected_multiplexer, quad_names)
-    currents = np.array([0, -1, 0, 1, 0]) * 5
-    # currents = np.array([0]) * 5
+    currents = np.array([0, -1, 0, 1, 0]) * 2
     cyc_currents = cycler(mux.power_converter, currents)
     cyc_count = cycler(cs, range(3))
     cmd = partial(bp.scan_nd, [bpm_devs], cyc_magnets * cyc_currents * cyc_count)
     cbs = [lt ] + plot  # + lp
 
-    db = catalog["heavy_local"]
+    # db = catalog["heavy_local"]
 
     md = dict(machine="BessyII", nickname="bba", measurement_target="beam_based_alignment",
               target="beam based alignemnt test",
               comment="currently only testing if data taking works"
               )
     RE = RunEngine(md)
-    RE.subscribe(db.v1.insert)
+    # RE.subscribe(db.v1.insert)
 
     # hidden side effect: I guess a run engine must exist to be able to use that?
     # see that limits are implemented in the digital twin
