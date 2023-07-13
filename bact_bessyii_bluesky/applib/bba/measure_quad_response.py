@@ -1,8 +1,6 @@
 """measure quadrupole response: for BESSY II
 
 """
-import matplotlib
-matplotlib.use('QtCairo')
 from functools import partial
 
 import bluesky.plans as bp
@@ -14,8 +12,8 @@ from bluesky import RunEngine
 from bluesky.callbacks import LiveTable
 from cycler import cycler
 from databroker import catalog
-from custom.bessyii.bluesky.live_plot import orbit_plots
-from custom.bessyii.ophyd.bact_bessy_ophyd.devices.pp import bpm, multiplexer
+from bact_bessyii_bluesky.live_plot import orbit_plots
+from bact_bessyii_ophyd.devices.pp import bpm, multiplexer
 
 
 def main(*, try_run=False, prefix=""):
@@ -113,13 +111,3 @@ def main(*, try_run=False, prefix=""):
 
     print(f"Measurement uid {uids}")
 
-
-if __name__ == "__main__":
-    plt.ion()
-    try:
-        main(try_run=True, prefix="Pierre:DT:")
-    except:
-        raise
-    else:
-        plt.ioff()
-        plt.show()
