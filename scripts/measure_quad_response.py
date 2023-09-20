@@ -6,7 +6,7 @@ from bact_bessyii_bluesky.applib.bba import measure_quad_response
 def main():
     plt.ion()
     try:
-        measure_quad_response.main(try_run=True, prefix="Pierre:DT:")
+        measure_quad_response.main(prefix="Pierre:DT:", currents=[0,2,-2,0], machine_name="BessyII", catalog_name="heavy_local",measurement_name="beam_based_alignment",try_run=True)
     except:
         raise
     else:

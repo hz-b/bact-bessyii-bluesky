@@ -2,7 +2,7 @@
 
 """
 from functools import partial
-
+import anyio
 import bluesky.plans as bp
 import matplotlib.pyplot as plt
 import numpy as np
@@ -15,8 +15,12 @@ from databroker import catalog
 from bact_bessyii_bluesky.live_plot import orbit_plots
 from bact_bessyii_ophyd.devices.pp import bpm, multiplexer
 
+import concurrent.futures
+executor = concurrent.futures.ThreadPoolExecutor()
 
-def main(*, try_run=False, prefix=""):
+def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=False):
+    # async def measure():
+
     # BESSSY II ...
     bpm_devs = bpm.BPM(prefix + "MDIZ2T5G", name="bpm")
     # BESSY II needs the hardware multiplexer ...
@@ -95,9 +99,10 @@ def main(*, try_run=False, prefix=""):
     cmd = partial(bp.scan_nd, [bpm_devs], cyc_magnets * cyc_currents * cyc_count)
     cbs = [lt ] + plot  # + lp
 
-    db = catalog["heavy_local"]
+    db = catalog[catalog_name ]#"heavy_local"]
 
-    md = dict(machine="BessyII", nickname="bba", measurement_target="beam_based_alignment",
+    md = dict(machine=machine_name #"BessyII"
+              , nickname="bba", measurement_target= measurement_name,#"beam_based_alignment",
               target="beam based alignemnt test",
               comment="currently only testing if data taking works"
               )
@@ -110,4 +115,7 @@ def main(*, try_run=False, prefix=""):
     uids = RE(cmd(), cbs)
 
     print(f"Measurement uid {uids}")
-
+    return uids
+    # return anyio.to_thread(measure)
+# async def run_sync_synchronously(func, *args, **kwargs):
+#     return await anyio.to_thread.run_sync(func, *args, **kwargs)
