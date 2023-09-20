@@ -12,7 +12,7 @@ from bact_bessyii_bluesky.applib.bba.measurement_config import MeasurementConfig
 app = FastAPI()
 router = APIRouter()
 # MongoDB connection
-client = MongoClient("mongodb://localhost:27017/")  # Replace with your MongoDB connection string
+client = MongoClient("mongodb://127.0.0.1:27017/")  # Replace with your MongoDB connection string
 db = client["bessyii"]  # Replace "mydatabase" with your desired database name
 measurement_collection = db["measurements"]  # Collection to store the measurement_config
 
