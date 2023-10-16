@@ -14,6 +14,7 @@ from cycler import cycler
 from databroker import catalog
 from bact_bessyii_bluesky.live_plot import orbit_plots
 from bact_bessyii_ophyd.devices.pp import bpm, multiplexer
+from bact_bessyii_ophyd.devices.raw import tune
 
 import concurrent.futures
 executor = concurrent.futures.ThreadPoolExecutor()
@@ -33,7 +34,7 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
     # mux = quadrupoles.QuadrupolesCollection(name="mux")
     # Measure the tune ... a quantity directly linked to the change of the quadrupole
     # Typically rather straightforward to measure
-    # tn = tune.Tunes(prefix + "TUNEZRP", name="tn")
+    tn = tune.Tunes(prefix + "TUNEZRP", name="tn")
     cs = CounterSink(name="cs")
 
     quad_names = mux.get_element_names()
@@ -99,7 +100,7 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
     cyc_magnets = cycler(mux.selected_multiplexer, quad_names)
     cyc_currents = cycler(mux.power_converter, currents)
     cyc_count = cycler(cs, range(3))
-    cmd = partial(bp.scan_nd, [bpm_devs], cyc_magnets * cyc_currents * cyc_count)
+    cmd = partial(bp.scan_nd, [bpm_devs, tn], cyc_magnets * cyc_currents * cyc_count)
     cbs = [lt ] + plot  # + lp
 
     db = catalog[catalog_name ]#"heavy_local"]
