@@ -25,6 +25,10 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
     bpm_devs = bpm.BPM(prefix + "MDIZ2T5G", name="bpm")
     # BESSY II needs the hardware multiplexer ...
     mux = multiplexer.Multiplexer(prefix=prefix, name="mux")
+    if not mux.connected:
+        # connectin to all the signals can take more than the standard
+        # 1. second
+        mux.wait_for_connection(timeout=5.0)
     # MLS has separate power converters these are collected as a software device
     # mux = quadrupoles.QuadrupolesCollection(name="mux")
     # Measure the tune ... a quantity directly linked to the change of the quadrupole
@@ -34,7 +38,7 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
 
     quad_names = mux.get_element_names()
     # test hack ...
-    quad_names = ["q3m2t8r"]
+    quad_names = ["Q3M2T8R"]
     if try_run:
         quad_names = quad_names[:2]
     lt = LiveTable(
@@ -93,7 +97,6 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
     print(mux.describe())
 
     cyc_magnets = cycler(mux.selected_multiplexer, quad_names)
-    currents = np.array([0, -1, 0, 1, 0]) * 2
     cyc_currents = cycler(mux.power_converter, currents)
     cyc_count = cycler(cs, range(3))
     cmd = partial(bp.scan_nd, [bpm_devs], cyc_magnets * cyc_currents * cyc_count)
