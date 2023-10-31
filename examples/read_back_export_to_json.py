@@ -14,15 +14,24 @@ class ObjectIdEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, o)
 
 
-db = catalog["heavy_local"]
 uid = "3c256552-7c81-4a1f-bf92-bfec5587cd3a"
 uid = "bcf9be93-88e3-46e0-b1e7-3e173756f525"
+prefix = "bba-measured"
+
+db = catalog["heavy"]
 run = db[uid]
 stream = run.primary
+
+# export metadata first
+filename = f"{prefix}-{uid}-metadata.json.bz2"
+print(f"exporting metadata to {filename}")
+with bz2.open(filename, "wt") as json_file:
+    json.dump(stream.metadata, json_file, cls=ObjectIdEncoder, indent=4)
+
+# export data
+filename = f"{prefix}-{uid}-raw-data.json.bz2"
+print(f"exporting data to {filename}")
 db = stream.read()
 print(f"data came: {db}")
-
-
-filename = f"bba-measured-raw-data-{uid}.json.bz2"
 with bz2.open(filename, "wt") as json_file:
-    json.dump(db.to_dict(), json_file, cls=ObjectIdEncoder, indent=4)
+    json.dump(db.compute().to_dict(), json_file, cls=ObjectIdEncoder, indent=4)
