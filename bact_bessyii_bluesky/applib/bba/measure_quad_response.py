@@ -5,8 +5,7 @@ from functools import partial
 import bluesky.plans as bp
 import matplotlib.pyplot as plt
 import numpy as np
-# to be replaced by a proper reimplementation
-from bact_bessyii_mls_ophyd.devices.process import CounterSink
+from bact_bessyii_mls_ophyd.devices.process.counter_sink import CounterSink
 from bluesky import RunEngine
 from bluesky.callbacks import LiveTable
 from cycler import cycler
@@ -88,7 +87,7 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
     #     plot_list.append(plot)
 
     if not mux.connected:
-        mux.wait_for_connection()
+        mux.wait_for_connection(timeout=10)
     print(mux.describe())
 
     cyc_magnets = cycler(mux.selected_multiplexer, quad_names)

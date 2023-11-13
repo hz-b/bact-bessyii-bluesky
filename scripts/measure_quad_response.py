@@ -1,5 +1,5 @@
 import matplotlib
-matplotlib.use('QtCairo')
+# matplotlib.use('QtCairo')
 import matplotlib.pyplot as plt
 from bact_bessyii_bluesky.applib.bba import measure_quad_response
 
