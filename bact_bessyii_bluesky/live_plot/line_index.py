@@ -6,7 +6,6 @@ These plots update on every new data the whole line
 import numpy as np
 from collections.abc import Sequence
 import logging
-# from bact2.bluesky.hacks.callbacks import LivePlot
 from bluesky.callbacks import LivePlot as BlueskyLivePlot
 
 logger = logging.getLogger("bact")

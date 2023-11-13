@@ -2,12 +2,11 @@
 
 """
 from functools import partial
-import anyio
 import bluesky.plans as bp
 import matplotlib.pyplot as plt
 import numpy as np
 # to be replaced by a proper reimplementation
-from bact2.ophyd.utils.preprocessors.CounterSink import CounterSink
+from bact_bessyii_mls_ophyd.devices.process import CounterSink
 from bluesky import RunEngine
 from bluesky.callbacks import LiveTable
 from cycler import cycler
