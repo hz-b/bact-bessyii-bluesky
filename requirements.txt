@@ -6,4 +6,4 @@ databroker
 cycler
 
 # dedicated bact packages
-bact_bessyii_ophyd
+bact-bessyii-ophyd

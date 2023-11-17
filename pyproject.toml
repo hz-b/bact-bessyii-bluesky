@@ -16,3 +16,4 @@ keywords = []
 [tool.poetry.dependencies]
 python = ">=3.7"
 bluesky = ">0"
+bact-bessyii-ophyd = "*"
