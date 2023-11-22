@@ -5,13 +5,14 @@ from functools import partial
 import bluesky.plans as bp
 import matplotlib.pyplot as plt
 import numpy as np
-from bact_bessyii_mls_ophyd.devices.process.counter_sink import CounterSink
+from bact_bessyii_mls_ophyd.devices.process.CounterSink import CounterSink
 from bluesky import RunEngine
-from bluesky.callbacks import LiveTable
+from bluesky.callbacks import LiveTable, LivePlot
 from cycler import cycler
 from databroker import catalog
 from bact_bessyii_bluesky.live_plot import orbit_plots
 from bact_bessyii_ophyd.devices.pp import bpm, multiplexer
+from bact_bessyii_ophyd.devices.raw import tune
 
 import concurrent.futures
 executor = concurrent.futures.ThreadPoolExecutor()
@@ -27,12 +28,22 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
     # mux = quadrupoles.QuadrupolesCollection(name="mux")
     # Measure the tune ... a quantity directly linked to the change of the quadrupole
     # Typically rather straightforward to measure
-    # tn = tune.Tunes(prefix + "TUNEZRP", name="tn")
+    tn = tune.Tunes(prefix + "TUNEZR", name="tn")
+    tn_dt = tune.Tunes(prefix + "Pierre:DT:" + "TUNEZR", name="tn_ds")
     cs = CounterSink(name="cs")
+
+    for dev in tn, tn_dt, mux:
+        if not dev.connected:
+            dev.wait_for_connection(timeout=10)
+
+    if not mux.connected:
+        mux.wait_for_connection(timeout=10)
+    #print(mux.describe())
 
     quad_names = mux.get_element_names()
     # test hack ...
-    quad_names = ["q3m2t8r"]
+    quad_names = ["Q4M2T8R"]
+    # quad_names = ["Q4M2D1R"]
     if try_run:
         quad_names = quad_names[:2]
     lt = LiveTable(
@@ -43,6 +54,10 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
             "qc_sel_r_setpoint",
             "qc_sel_p_readback",
             "qc_sel_r_readback",
+            tn.x.freq.name,
+            tn_dt.x.freq.name,
+            tn.y.freq.name,
+            tn_dt.y.freq.name,
             cs.name,
         ],
         default_prec=10
@@ -86,16 +101,29 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
     #                          reading_count=cs.setpoint.name)
     #     plot_list.append(plot)
 
-    if not mux.connected:
-        mux.wait_for_connection(timeout=10)
-    print(mux.describe())
+    fig, axes = plt.subplots(2, 1, sharex=True)
+    ax_x, ax_y = axes
+    # fmt: off
+    lp_tunes = [
+        LivePlot( tn.x.freq.name,    ax=ax_x, marker=".", linestyle="-", label="machine"  ),
+        LivePlot( tn_dt.x.freq.name, ax=ax_x, marker="+", linestyle="" , label="twin"     ),
+        LivePlot( tn.y.freq.name,    ax=ax_y, marker=".", linestyle="-", label="machine"  ),
+        LivePlot( tn_dt.y.freq.name, ax=ax_y, marker="+", linestyle="",  label="twin"      ),
+        ]
+    fig, ax = plt.subplots(1, 1)
+    lp_mux_quad = [
+        LivePlot(   mux.power_converter.setpoint.name, label="set",  ax = ax),
+        LivePlot(   mux.power_converter.readback.name, label="rdbk", ax = ax),
+        ]
+    # fmt: on
+
 
     cyc_magnets = cycler(mux.selected_multiplexer, quad_names)
     currents = np.array([0, -1, 0, 1, 0]) * 2
     cyc_currents = cycler(mux.power_converter, currents)
     cyc_count = cycler(cs, range(3))
-    cmd = partial(bp.scan_nd, [bpm_devs], cyc_magnets * cyc_currents * cyc_count)
-    cbs = [lt ] + plot  # + lp
+    cmd = partial(bp.scan_nd, [bpm_devs, tn, tn_dt], cyc_magnets * cyc_currents * cyc_count)
+    cbs = [lt ] + plot + lp_tunes +  lp_mux_quad  # + lp
 
     db = catalog[catalog_name ]#"heavy_local"]
 
