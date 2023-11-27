@@ -1,5 +1,5 @@
 # app.py
-from fastapi import APIRouter, Body, Request, Response, HTTPException, status, FastAPI
+from fastapi import APIRouter, Body, Request, Response, HTTPException, status, FastAPI, Depends
 import numpy as np
 from typing import List
 from pymongo import MongoClient
@@ -8,17 +8,16 @@ from pymongo import MongoClient
 from bact_bessyii_bluesky.applib.bba import measure_quad_response
 from bact_analysis_bessyii.bba import app as bbaAnalysis
 from bact_bessyii_bluesky.applib.bba.measurement_config import MeasurementConfig
+from bact_bessyii_mls_ophyd.db.mongo_repository import InitializeMongo
 
 app = FastAPI()
 router = APIRouter()
-# MongoDB connection
-client = MongoClient("mongodb://127.0.0.1:27017/")  # Replace with your MongoDB connection string
-db = client["bessyii"]  # Replace "mydatabase" with your desired database name
-measurement_collection = db["measurements"]  # Collection to store the measurement_config
 
+# MongoDB connection
+db_init = InitializeMongo()
 
 @router.post('/measurements/', response_model=dict)
-async def add_measurement(data: dict):
+async def add_measurement(data: dict, connector: InitializeMongo = Depends(db_init)):
     #extract the input from post service
     prefix = data['prefix']
     currents = np.array(data['currents'])
@@ -42,14 +41,16 @@ async def add_measurement(data: dict):
     bbaAnalysis.main(uids[0])
     # Store the measurement configuration in MongoDB
     measurement_config.currents = measurement_config.currents.tolist()
-    measurement_collection.insert_one(measurement_config.__dict__)
+    collection = connector.get_collection("measurements")
+    collection.insert_one(measurement_config.__dict__)
     # Return the uids as a response
     return {'uids': uids}
 
 
-@router.get("/measurements", response_description="List all Machines", response_model=List[MeasurementConfig])
-def get_configurations(request: Request):
-    configurations = list(request.app.database["measurements"].find(limit=100))
+@router.get("/measurements", response_description="List all measurements", response_model=list)
+async def get_configurations(connector: InitializeMongo = Depends(db_init)):
+    collection = connector.get_collection("measurements")
+    configurations = list(collection.find(limit=100))
     return configurations
 
 @router.get("/favicon.ico")
