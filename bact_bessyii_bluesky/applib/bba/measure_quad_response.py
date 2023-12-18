@@ -16,7 +16,7 @@ from bact_bessyii_ophyd.devices.pp import bpm, multiplexer
 import concurrent.futures
 executor = concurrent.futures.ThreadPoolExecutor()
 
-def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=False):
+def main(prefix, currents, machine_name, catalog_name, measurement_name, magnet_names=["Q3M2T8R"], try_run=False):
     # async def measure():
 
     # BESSSY II ...
@@ -31,10 +31,11 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
     cs = CounterSink(name="cs")
 
     quad_names = mux.get_element_names()
-    # test hack ...
-    quad_names = ["q3m2t8r"]
+
     if try_run:
-        quad_names = quad_names[:2]
+        # test hack ...
+        quad_names = magnet_names
+        # quad_names = quad_names[:2]
     lt = LiveTable(
         [
             mux.selected_multiplexer.setpoint.name,
@@ -97,7 +98,6 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
     cmd = partial(bp.scan_nd, [bpm_devs], cyc_magnets * cyc_currents * cyc_count)
     cbs = [lt ] + plot  # + lp
 
-    db = catalog[catalog_name ]#"heavy_local"]
 
     md = dict(machine=machine_name #"BessyII"
               , nickname="bba", measurement_target= measurement_name,#"beam_based_alignment",
@@ -105,7 +105,9 @@ def main(prefix, currents,machine_name,catalog_name, measurement_name,try_run=Fa
               comment="currently only testing if data taking works"
               )
     RE = RunEngine(md)
-    RE.subscribe(db.v1.insert)
+    if catalog_name:
+        db = catalog[catalog_name]  # "heavy_local"]
+        RE.subscribe(db.v1.insert)
 
     # hidden side effect: I guess a run engine must exist to be able to use that?
     # see that limits are implemented in the digital twin
