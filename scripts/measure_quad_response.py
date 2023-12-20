@@ -1,9 +1,11 @@
 import matplotlib
-# matplotlib.use('QtCairo')
+# should be selected by user / account settings
+# with qt liveplot works
+matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
 from bact_bessyii_bluesky.applib.bba import measure_quad_response
 import argparse
-import sys
+
 
 def main():
     parser = argparse.ArgumentParser(description="measure matrix orbit response")
@@ -28,6 +30,7 @@ def main():
     else:
         plt.ioff()
         plt.show()
+
 
 if __name__ == "__main__":
     main()

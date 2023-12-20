@@ -34,6 +34,8 @@ def main(prefix, currents, machine_name, catalog_name, measurement_name, magnet_
 
     if try_run:
         # test hack ...
+        # at least a magnet must be given
+        assert(len(magnet_names) > 0)
         quad_names = magnet_names
         # quad_names = quad_names[:2]
     lt = LiveTable(
