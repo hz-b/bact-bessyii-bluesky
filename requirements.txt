@@ -5,5 +5,10 @@ bluesky<1.11
 databroker
 cycler
 
+# for matplotlib, interactive use
+# not only tk
+PyQT5
+PySide2
+
 # dedicated bact packages
 bact-bessyii-ophyd
