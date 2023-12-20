@@ -17,3 +17,7 @@ keywords = []
 python = ">=3.7"
 bluesky = ">0"
 bact-bessyii-ophyd = "*"
+
+# needs to be investigated 
+# [project.scripts]
+# measure_quad_response = "bact_bessyii_bluesy.applib.bba.measure_quad_response:main"
