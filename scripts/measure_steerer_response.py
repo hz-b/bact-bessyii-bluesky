@@ -18,7 +18,7 @@ def main():
     try:
         measure_steerer_response.main(
             prefix=args.epics_prefix,
-            currents=[0,2,-2,0],
+            currents=[0,1,-1,0],
             machine_name="BessyII",
             catalog_name=args.catalog_name,
             measurement_name="beam_based_alignment",

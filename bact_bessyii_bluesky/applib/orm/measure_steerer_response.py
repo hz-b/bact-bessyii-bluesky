@@ -1,6 +1,8 @@
 """measure quadrupole response: for BESSY II
 
 """
+from bluesky.simulators import check_limits
+
 # from databroker import catalog
 
 from bact_bessyii_bluesky.live_plot import orbit_plots
@@ -15,7 +17,9 @@ from bluesky.callbacks import LiveTable
 import numpy as np
 from cycler import cycler
 from functools import partial
+import logging
 
+logger = logging.getLogger("bessyii-bluesky")
 
 
 def main(
@@ -24,24 +28,23 @@ def main(
     machine_name,
     catalog_name,
     measurement_name,
-    magnet_names=["Q3M2T8R"],
+    magnet_names=["VS2M2T2R", "VS2M2T4R"],
     try_run=False,
 ):
-    # async def measure():
 
-    # BESSSY II ...
+    # Beam position monitors
     bpm_devs = BPM(prefix + "MDIZ2T5G", name="bpm")
-    # BESSY II needs the hardware multiplexer ...
-
-    # MLS has separate power converters these are collected as a software device
+    # a muxer in software
     mux = SteerersCollection(prefix, name="mux")
-    # Measure the tune ... a quantity directly linked to the change of the quadrupole
-    # Typically rather straightforward to measure
-    # tn = tune.Tunes(prefix + "TUNEZRP", name="tn")
+    if not mux.connected:
+        # would be handled by run engine / presumably stage when starting
+        # but with so many channels the standard timeout is too short
+        mux.wait_for_connection(timeout=2)
+
+    # count the readings: simplifies analysis later on
     cs = CounterSink(name="cs")
 
-    steerer_names = mux.get_element_names()
-
+    # Set up the live table: plot what you want to see online
     lt = LiveTable(
         [
             mux.sel.selected.name,
@@ -54,20 +57,29 @@ def main(
         default_prec=10,
     )
 
+    m2mm = 1e3
     plot = orbit_plots.plots(
         magnet_name=mux.sel.selected.name,
         ds=None,
         x_pos="/".join(["bpm_elem_data", "x"]),
         y_pos="/".join(["bpm_elem_data", "y"]),
-        y_scale=1e6,
+        x_scale=1,
+        y_scale=m2mm,
         reading_count=cs.setpoint.name,
     )
 
-    if not mux.connected:
-        mux.wait_for_connection(timeout=10)
+    steerer_names = mux.get_element_names()
+    if try_run:
+        for name in magnet_names:
+            # only use the names of the magnets specified on the command line
+            if name not in steerer_names:
+                logger.error("steerer names %s", steerer_names)
+                raise AssertionError(f"{name} not in steerer_names")
+            steerer_names = magnet_names
 
     cyc_magnets = cycler(mux, steerer_names)
-    currents = np.array([0, -1, 0, 1, 0])
+
+    currents = np.asarray(currents)
     cyc_currents = cycler(mux.sel, currents)
     cyc_count = cycler(cs, range(3))
     cmd = partial(bp.scan_nd, [bpm_devs], cyc_magnets * cyc_currents * cyc_count)
@@ -75,20 +87,21 @@ def main(
 
     md = dict(
         machine=machine_name,  # "BessyII"
-        nickname="bba",
+        nickname="orm",
         measurement_target=measurement_name,  # "beam_based_alignment",
-        target="beam based alignemnt test",
-        comment="currently only testing if data taking works",
+        target="orbit response measurement",
+        comment="demonstration run",
     )
     RE = RunEngine(md)
     if catalog_name:
         from databroker import catalog
-        db = catalog[catalog_name]  # "heavy_local"]
+        db = catalog[catalog_name]
         RE.subscribe(db.v1.insert)
+
 
     # hidden side effect: I guess a run engine must exist to be able to use that?
     # see that limits are implemented in the digital twin
-    # check_limits(cmd())
+    check_limits(cmd())
     uids = RE(cmd(), cbs)
 
     print(f"Measurement uid {uids}")
