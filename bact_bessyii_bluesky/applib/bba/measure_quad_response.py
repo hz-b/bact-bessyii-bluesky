@@ -11,18 +11,17 @@ from bluesky.callbacks import LiveTable
 from cycler import cycler
 from databroker import catalog
 from bact_bessyii_bluesky.live_plot import orbit_plots
-from bact_bessyii_ophyd.devices.pp import bpm, multiplexer
+from bact_bessyii_ophyd.devices.pp.multiplexer.multiplexer import Multiplexer
+from bact_bessyii_ophyd.devices.pp.bpm.bpm import BPM
 
-import concurrent.futures
-executor = concurrent.futures.ThreadPoolExecutor()
 
 def main(prefix, currents, machine_name, catalog_name, measurement_name, magnet_names=["Q3M2T8R"], try_run=False):
     # async def measure():
 
     # BESSSY II ...
-    bpm_devs = bpm.BPM(prefix + "MDIZ2T5G", name="bpm")
+    bpm_devs = BPM(prefix + "MDIZ2T5G", name="bpm")
     # BESSY II needs the hardware multiplexer ...
-    mux = multiplexer.Multiplexer(prefix=prefix, name="mux")
+    mux = Multiplexer(prefix=prefix, name="mux")
     # MLS has separate power converters these are collected as a software device
     # mux = quadrupoles.QuadrupolesCollection(name="mux")
     # Measure the tune ... a quantity directly linked to the change of the quadrupole

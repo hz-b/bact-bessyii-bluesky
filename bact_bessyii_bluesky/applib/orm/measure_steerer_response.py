@@ -18,6 +18,7 @@ import numpy as np
 from cycler import cycler
 from functools import partial
 import logging
+import pprint
 
 logger = logging.getLogger("bessyii-bluesky")
 
@@ -39,7 +40,7 @@ def main(
     if not mux.connected:
         # would be handled by run engine / presumably stage when starting
         # but with so many channels the standard timeout is too short
-        mux.wait_for_connection(timeout=2)
+        mux.wait_for_connection(timeout=5)
 
     # count the readings: simplifies analysis later on
     cs = CounterSink(name="cs")
@@ -75,7 +76,17 @@ def main(
             if name not in steerer_names:
                 logger.error("steerer names %s", steerer_names)
                 raise AssertionError(f"{name} not in steerer_names")
-            steerer_names = magnet_names
+        steerer_names = magnet_names
+
+    # store the value the power converter say the current has now
+    # in case of failure it should be set back to that one 
+
+    for name in steerer_names:
+        pc = getattr(mux.power_converters, name)
+        rb = pc.r.setpoint.get()
+        # current value as offset and reset value
+        pc.r.configure(dict(rv=rb, set_back=True))
+        pc.configure(dict(offset=rb))
 
     cyc_magnets = cycler(mux, steerer_names)
 
