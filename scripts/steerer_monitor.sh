@@ -1,0 +1,36 @@
+CAMONITOR=camonitor
+VEC_NELEMS=5
+
+PREFIX="Pierre:DT"
+
+STEERER_PVS="$PREFIX:"'$elem:im:Cm'
+STEERER_PVS="$STEERER_PVS $PREFIX:"'$elem:Cm:set'
+STEERER_PVS="$STEERER_PVS $PREFIX:"'$elem:Cm:rdbk'
+STEERER_PVS="$STEERER_PVS $PREFIX:"'$elem:im:dItest'
+STEERER_PVS="$STEERER_PVS $PREFIX:"'$elem:im:I'
+STEERER_PVS="$STEERER_PVS $PREFIX:"'$elem:par:hw2phys'
+
+BPM_PVS="$PREFIX:"beam:bpm:dx    
+BPM_PVS=" $BPM_PVS $PREFIX:"beam:bpm:dy    
+BPM_PVS=" $BPM_PVS $PREFIX:"beam:bpm:bdata 
+BPM_PVS=" $BPM_PVS $PREFIX:"beam:bpm:names
+
+BEAM_PVS="$PREFIX"beam:orbit:x $PREFIX:"beam:orbit:y"
+
+PROGRESS_MONITOR="$PREFIX:"dt:updates
+PROGRESS_MONITOR="$PROGRESS_MONITOR $PREFIX:"dt:calc:orbit:req  
+PROGRESS_MONITOR="$PROGRESS_MONITOR $PREFIX:"dt:calc:orbit:exc  
+PROGRESS_MONITOR="$PROGRESS_MONITOR $PREFIX:"dt:calc:orbit:roe  
+PROGRESS_MONITOR="$PROGRESS_MONITOR $PREFIX:"dt:calc:twiss:req  
+PROGRESS_MONITOR="$PROGRESS_MONITOR $PREFIX:"dt:calc:twiss:exc
+
+STEERER_PVS_ALL=""
+
+for elem in VS2M2T2R VS2M2T4R
+do
+    TMP=`eval echo "$STEERER_PVS"`
+    STEERER_PVS_ALL="$STEERER_PVS_ALL $TMP"
+done
+
+# camonitor "-# $VEC_NELEMS"  $BPM_PVS $STEERER_PVS_ALL
+camonitor "-# $VEC_NELEMS"  $BPM_PVS $BEAM_PVS $PROGRESS_MONITOR $STEERER_PVS_ALL
