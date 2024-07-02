@@ -59,7 +59,7 @@ class LabelledPlot(LivePlot):
         self._epoch_offset = doc['time']  # used if self.x == 'time'
 
         self.x_data = self._label_positions
-        self.y_data = np.zeros(len(self.x_data), np.float_)
+        self.y_data = np.zeros(len(self.x_data), float)
         self.y_data[:] = np.nan
 
         cls_name = self.__class__.__name__
