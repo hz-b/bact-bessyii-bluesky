@@ -44,7 +44,6 @@ jobs:
            packages="bact-device-models bact-bessyii-ophyd"
            for t_dir in $packages
            do
-             t_dir=bact-device-models
              if [ -f $t_dir/requirements.txt ]; then pip install -r $t_dir/requirements.txt; fi
              # make it a path, otherwise it searches pypi repo
              pip install $t_dir/
