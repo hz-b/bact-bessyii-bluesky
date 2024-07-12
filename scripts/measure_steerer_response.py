@@ -9,7 +9,7 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser(description="measure matrix orbit response")
-    parser.add_argument("--epics-prefix", metavar="prefix", default="Pierre:DT:")
+    parser.add_argument("--epics-prefix", metavar="prefix", default="Anonym:DT:")
     parser.add_argument("-m", "--magnets-to-process", metavar="magnets", nargs="*")
     parser.add_argument("--catalog-name", metavar="catalog_name", default="heavy_local")
     parser.add_argument("--full-run", default=False, action="store_true")

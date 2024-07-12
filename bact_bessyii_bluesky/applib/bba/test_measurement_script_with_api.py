@@ -6,7 +6,7 @@ def test_measurement_config_post():
 
     # Example data for the measurement_config
     data = {
-        "prefix": "Pierre:DT:",
+        "prefix": "Anonym:DT:",
         "currents": [0, -2, 0, 2, 0],
         "catalog_name": "heavy_local",
         "machine_name": "BessyII",

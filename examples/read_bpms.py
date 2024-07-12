@@ -8,7 +8,7 @@ import bluesky.plans as bp
 
 
 def main():
-    prefix = "Pierre:DT:"
+    prefix = "Anonym:DT:"
     bpm_devs = bpm.BPM(prefix + "MDIZ2T5G", name="bpm")
     if not bpm_devs.connected:
         bpm_devs.wait_for_connection()

@@ -1,7 +1,7 @@
 CAMONITOR=camonitor
 VEC_NELEMS=5
 
-PREFIX="Pierre:DT"
+PREFIX="Anonym:DT"
 
 STEERER_PVS="$PREFIX:"'$elem:im:Cm'
 STEERER_PVS="$STEERER_PVS $PREFIX:"'$elem:Cm:set'
