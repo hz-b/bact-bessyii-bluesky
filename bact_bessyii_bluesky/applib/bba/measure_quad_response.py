@@ -33,6 +33,9 @@ def main(prefix, currents, machine_name, catalog_name, measurement_name, magnet_
 
     quad_names = mux.get_element_names()
 
+    if not mux.connected:
+        mux.wait_for_connection(timeout=5)
+
     if try_run:
         # test hack ...
         # at least a magnet must be given
