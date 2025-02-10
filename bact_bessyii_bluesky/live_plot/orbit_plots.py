@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
 from . import line_index, bpm_plot
 
-def plots(*, magnet_name=None, ds=None, x_pos, y_pos, reading_count=None, **kwargs):
+def plots(*, magnet_name=None, ds=None, x_pos, y_pos, reading_count=None,
+          bpms_to_exclude=None, **kwargs):
     '''Typical orbit plots
 
     Plots the measured x and y position on top of the plots
@@ -38,10 +39,12 @@ def plots(*, magnet_name=None, ds=None, x_pos, y_pos, reading_count=None, **kwar
     'dt_mux_selector_readback'
 
     line_x = line_index.PlotLine(
-        x_pos, x=ds, ax=ax1, legend_keys=['x'], y_scale=kwargs.get("y_scale", 1.0)
+        x_pos, x=ds, ax=ax1, legend_keys=['x'], y_scale=kwargs.get("y_scale", 1.0),
+        bpms_to_exclude=bpms_to_exclude
     )
     line_y = line_index.PlotLine(
-        y_pos, x=ds, ax=ax2, legend_keys=['y'], y_scale=kwargs.get("y_scale", 1.0)
+        y_pos, x=ds, ax=ax2, legend_keys=['y'], y_scale=kwargs.get("y_scale", 1.0),
+        bpms_to_exclude=bpms_to_exclude
     )
 
     # xpos = "bpm_waveform_x_pos"

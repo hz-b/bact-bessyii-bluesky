@@ -28,10 +28,15 @@ def main(
     machine_name,
     catalog_name,
     measurement_name,
-    magnet_names=["VS2M2T2R", "VS2M2T4R"],
+    magnet_names=None,
     try_run=False,
 ):
 
+    if magnet_names is None:
+        magnet_names = ["VS2P2T2R", "VS2P2T4R", "HS1PT2R", "HS1PT3R"]
+    if currents is None:
+        currents = [0, -1, 0, 1, 0]
+    print("Using currents", currents)
     # Beam position monitors
     bpm_devs = BPM(prefix + "MDIZ2T5G", name="bpm")
     # a muxer in software
@@ -64,8 +69,9 @@ def main(
         x_pos="/".join(["bpm_elem_data", "x"]),
         y_pos="/".join(["bpm_elem_data", "y"]),
         x_scale=1,
-        y_scale=m2mm,
+        y_scale=10/2**15,
         reading_count=cs.setpoint.name,
+        bpms_to_exclude="BPMZ41T6R"
     )
 
     steerer_names = mux.get_element_names()

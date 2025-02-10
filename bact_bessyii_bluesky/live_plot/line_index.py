@@ -15,6 +15,8 @@ def name_or_root_of_path(txt: str) -> str:
         return txt.split("/")[0]
     return txt
 
+def clean_bpm_data(bpm_data, *, bpms_to_exclude):
+    return [v for v in bpm_data if v['name'] not in bpms_to_exclude]
 
 def bpm_data_to_plot_data(bpm_read):
     return np.array([[bpm_data[plane]['pos_raw'] for plane in ("x", "y")]
@@ -57,6 +59,7 @@ class PlotLine(LivePlot):
     def __init__(self, *args, **kwargs):
         self.x_scale = kwargs.pop("x_scale", 1.0)
         self.y_scale = kwargs.pop("y_scale", 1.0)
+        self.bpms_to_exclude = kwargs.pop("bpms_to_exclude", None)
         super().__init__(*args, **kwargs)
 
     def scale_data(self, x, y):
@@ -67,6 +70,8 @@ class PlotLine(LivePlot):
         return xs, ys
 
     def doc_to_bpmdata(self, x, y):
+        if self.bpms_to_exclude:
+            y = clean_bpm_data(y, bpms_to_exclude=self.bpms_to_exclude)
         bpm_data = bpm_data_to_plot_data(y)
 
         if self.y[-1] == "x":

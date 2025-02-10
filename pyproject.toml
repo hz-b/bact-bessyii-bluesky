@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "bact-bessyii-bluesky"
-version = "0.0.1"
+version = "0.0.2"
 description = "Dashboard for BESSY II analysis"
 authors = [ "Waheedullah Sulaiman Khail", "Pierre Schnizer" ]
 license = "GPL-3.0"
@@ -14,10 +14,14 @@ homepage = "https://github.com/hz-b/bact-bessyii-bluesky"
 keywords = []
 
 [tool.poetry.dependencies]
+bact-bessyii-ophyd = ">=0.0.2"
+bact_bessyii_mls_ophyd = "*"
 python = ">=3.7"
 bluesky = ">0"
-bact-bessyii-ophyd = "*"
-
-# needs to be investigated 
+matplotlib = "*"
+databroker = "*"
+# for matplotlib as backend
+PyQt5 = "*"
+# needs to be investigated
 # [project.scripts]
 # measure_quad_response = "bact_bessyii_bluesy.applib.bba.measure_quad_response:main"

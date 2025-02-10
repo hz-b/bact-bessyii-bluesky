@@ -9,8 +9,9 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser(description="measure matrix orbit response")
-    parser.add_argument("--epics-prefix", metavar="prefix", default="Anonym:DT:")
+    parser.add_argument("--epics-prefix", metavar="prefix", default="Anonym:")
     parser.add_argument("-m", "--magnets-to-process", metavar="magnets", nargs="*")
+    parser.add_argument("-c", "--current-step", metavar="currents", nargs="*", type=float)
     parser.add_argument("--catalog-name", metavar="catalog_name", default="heavy_local")
     parser.add_argument("--full-run", default=False, action="store_true")
     args = parser.parse_args()
@@ -18,7 +19,7 @@ def main():
     try:
         measure_steerer_response.main(
             prefix=args.epics_prefix,
-            currents=[0,1,-1,0],
+            currents=args.current_step,
             machine_name="BessyII",
             catalog_name=args.catalog_name,
             measurement_name="beam_based_alignment",
