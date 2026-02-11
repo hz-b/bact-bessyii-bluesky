@@ -11,6 +11,7 @@ class Excitation:
 @dataclass
 class ExcitationRay:
     ray: Sequence[Excitation]
+    target_angle: float
 
 
 @dataclass

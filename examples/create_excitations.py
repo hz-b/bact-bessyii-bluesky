@@ -11,8 +11,9 @@ def convert_complex_ray_to_excitations(ray: Sequence[complex]) -> Sequence[Excit
     return [Excitation(float(p.real), float(p.imag)) for p in ray]
 
 
-def convert_complex_rays_to_excitation_rays(rays: Sequence[Sequence[complex]]) -> Sequence[ExcitationRay]:
-    return [ExcitationRay(ray=convert_complex_ray_to_excitations(ray)) for ray in rays]
+def convert_complex_rays_to_excitation_rays(rays: Sequence[Sequence[complex]], angles: Sequence[float]) -> Sequence[ExcitationRay]:
+    return [ExcitationRay(ray=convert_complex_ray_to_excitations(ray), target_angle=angle) for ray, angle in zip(rays, angles)]
+
 
 
 def main():
@@ -33,13 +34,13 @@ def main():
     mask = np.abs(Z_grid) > radius
     Zm = ma.masked_array(Z_grid, mask=mask)
     mask = np.array(Z_grid.shape, dtype=bool)
-    print(Z_grid.astype(int))
+    # print(Z_grid.astype(int))
     r = np.linspace(0, 5, num=101)
     rays, remaning_points = create_rays_on_turned_grid(
         Zm, angles/180.0*np.pi, r, threshold=0.05
     )
 
-    rays = convert_complex_rays_to_excitation_rays(rays)
+    rays = convert_complex_rays_to_excitation_rays(rays, angles)
     rays
     ec = ExcitationCollection(col=rays)
     ec
