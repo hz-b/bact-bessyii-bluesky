@@ -7,8 +7,24 @@ from numpy import ma as ma
 logger = logging.getLogger("bact-bessyii-bluesky")
 
 
-def create_rays_on_turned_grid(Zm: ma.masked_array[complex], phi: Sequence[float], r: Sequence[float], threshold:float) -> Sequence[Sequence[complex]]:
-    '''Select points from ZM using rays along phi and r
+def sort_selected_points(points: Sequence[complex]) -> Sequence[complex]:
+    """sort points by distance from center"""
+    points = [z for z in points if z is not None]
+    try:
+        points.sort(key=np.absolute)
+    except Exception as exc:
+        logger.error(f"Failed to sort {points=}: {exc=}")
+        raise exc
+    return points
+
+
+def create_rays_on_turned_grid(
+    Zm: ma.masked_array[complex],
+    phi: Sequence[float],
+    r: Sequence[float],
+    threshold: float,
+) -> Sequence[Sequence[complex]]:
+    """Select points from ZM using rays along phi and r
 
     But turn the grid, so it is easy to spot offset from line
 
@@ -18,7 +34,7 @@ def create_rays_on_turned_grid(Zm: ma.masked_array[complex], phi: Sequence[float
         phi:         the different directions of the rays starting from the center
         r:           radial positions of the rays
         theshold ... maximum distance to accept as deviation
-    '''
+    """
     phi = np.atleast_1d(phi)
     r = np.atleast_1d(r)
 
@@ -47,18 +63,7 @@ def create_rays_on_turned_grid(Zm: ma.masked_array[complex], phi: Sequence[float
             continue
         args = args[:max_points]
 
-        # select the points
-        Zsel = Z.ravel()[args]
-        # Sort the points by distance from center
-        Zsel = Zsel.tolist()
-        Zsel = [z for z in Zsel if z is not None]
-        try:
-            Zsel.sort(key=np.absolute)
-        except Exception as exc:
-            logger.error(f'{Zsel=}: {exc=}')
-            raise exc
-        Zsel = np.array(Zsel)
-        rays.append(Zsel)
+        rays.append(sort_selected_points(Z.ravel()[args]))
 
         # Mask already used points
         maskr = mask.ravel()
@@ -68,9 +73,13 @@ def create_rays_on_turned_grid(Zm: ma.masked_array[complex], phi: Sequence[float
     return rays, mask
 
 
-
-def create_rays_on_grid(Zm: ma.masked_array[complex], phi: Sequence[float], r: Sequence[float], threshold:float) -> Sequence[Sequence[complex]]:
-    '''Select points from ZM using rays along phi and r
+def create_rays_on_grid(
+    Zm: ma.masked_array[complex],
+    phi: Sequence[float],
+    r: Sequence[float],
+    threshold: float,
+) -> Sequence[Sequence[complex]]:
+    """Select points from ZM using rays along phi and r
 
     Args:
         Zm:          a masked array of complex points.
@@ -78,7 +87,7 @@ def create_rays_on_grid(Zm: ma.masked_array[complex], phi: Sequence[float], r: S
         phi:         the different directions of the rays starting from the center
         r:           radial positions of the rays
         theshold ... maximum distance to accept as deviation
-    '''
+    """
     phi = np.atleast_1d(phi)
     r = np.atleast_1d(r)
 
@@ -107,23 +116,12 @@ def create_rays_on_grid(Zm: ma.masked_array[complex], phi: Sequence[float], r: S
         dZsel = dZ[np.arange(zt.shape[0]), args]
         dZsela = np.absolute(dZsel)
 
-        # only use those args for which the distance is below some thresod
+        # only use those args for which the distance is below some threshold
         args = args[dZsela < threshold]
 
         # avoid repetition of identical points
         t_args = list(set(args.tolist()))
-        Zsel = Zmr[t_args]
-
-        # Sort the points by distance from center
-        Zsel = Zsel.tolist()
-        Zsel = [z for z in Zsel if z is not None]
-        try:
-            Zsel.sort(key=np.absolute)
-        except Exception as exc:
-            logger.error(f'{Zsel=}: {exc=}')
-            raise exc
-        Zsel = np.array(Zsel)
-        rays.append(Zsel)
+        rays.append(sort_selected_points(Zmr[t_args]))
 
         # Mask already used points
         maskr = mask.ravel()

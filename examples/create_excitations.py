@@ -2,8 +2,8 @@ from typing import Sequence
 
 import numpy as np
 import numpy.ma as ma
-from bact_bessyii_bluesky.applib.utils.create_rays_on_grid import create_rays_on_grid, create_rays_on_turned_grid
-from bact_bessyii_bluesky.applib.utils.produce_in_between import produce_in_between
+from bact_bessyii_bluesky.utils.create_rays_on_grid import create_rays_on_turned_grid
+from bact_bessyii_bluesky.utils.produce_in_between import produce_in_between
 from bact_bessyii_bluesky.model.excitation_rays import Excitation, ExcitationRay, ExcitationCollection
 
 
