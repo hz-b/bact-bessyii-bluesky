@@ -15,10 +15,11 @@ keywords = []
 
 [tool.poetry.dependencies]
 python = ">=3.7"
-bluesky = "<1.11"
-bact-bessyii-ophyd = "*"
+bluesky = "*"
+bact-bessyii-ophyd-async = "*"
 matplotlib = "*"
 PyQt5 = "*"
+jsons = "*"
 
 # needs to be investigated
 # [project.scripts]
