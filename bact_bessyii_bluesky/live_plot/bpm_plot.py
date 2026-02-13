@@ -9,7 +9,7 @@ from . import line_index
 # import numpy as np
 import logging
 
-logger = logging.getLogger("bact2")
+logger = logging.getLogger("bact-bessyii-bluesky")
 
 
 class BPMComparisonPlot(labelled_plot.LabelledPlot):
