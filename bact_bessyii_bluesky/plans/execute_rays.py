@@ -19,7 +19,7 @@ def execute_rays_plan(
     rays: ExcitationCollection,
     reinject_plan,
     go_on: Callable[[Mapping[str, Reading]], bool],
-    md: None,
+    md: Dict=None,
 ):
     """ """
     _md = md or {}
@@ -29,7 +29,9 @@ def execute_rays_plan(
     assert info_signals["ray_step"]
 
     @bpp.stage_decorator(
-        list(detectors) + [horizontal_excitation, vertical_excitation] + list(info_signals)
+        list(detectors) +
+        [horizontal_excitation, vertical_excitation] +
+        [sig for _, sig in info_signals.items()]
     )
     @bpp.run_decorator(md=_md)
     def inner():
@@ -56,6 +58,9 @@ def dynamic_aperture_rays_plan(
     go_on: Callable[[Mapping[str, Reading]], bool],
     reinject_plan,
 ):
+
+    assert callable(reinject_plan)
+
     for cnt, ray in enumerate(rays.col):
         yield from bps.mv(info_signals["ray"], cnt)
         yield from reinject_plan()

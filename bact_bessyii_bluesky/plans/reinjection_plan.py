@@ -27,7 +27,7 @@ def reinject_current(topup_device, before_injection, after_injection):
          Topup engine (device proxy) should be able to delay the switch
          if required
     """
-    logger.info('Executing reinjection')
+    logger.info('Executing reinjection:  prepare plan finalisation')
 
     def shutoff_injection_plan():
         logger.info('    finalize plan: switching injection off (anyway)')
@@ -47,3 +47,14 @@ def reinject_current(topup_device, before_injection, after_injection):
         logger.info('    injected:   steps requested for finalising')
         yield from after_injection()
         logger.info('    injected:   finished, handling over to finalise plan')
+
+    logger.info('    injection: calling steps')
+    try:
+        r = yield from inner()
+    except Exception as exc:
+        logger.error('    injection  failed: {exc}')
+        raise exc
+    else:
+        logger.info('    injection: finished successfully')
+        return r
+
