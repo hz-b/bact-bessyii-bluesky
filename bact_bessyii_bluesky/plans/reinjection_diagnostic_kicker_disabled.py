@@ -14,16 +14,15 @@ def setup_reinjection(
     Todo:
         find out if plans are already evaluated in async mode
     """
-
     async def get_kicker_values():
         return await asyncio.gather(
             horizontal_kicker_device.setpoint.get_value(),
             vertical_kicker_device.setpoint.get_value(),
         )
 
-    hk_reset_value, vk_reset_value = asyncio.get_event_loop().run_until_complete(
-        get_kicker_values()
-    )
+    # hk_reset_value, vk_reset_value = asyncio.get_event_loop().run_until_complete(
+    #     get_kicker_values()
+    #  )
 
     def before_injection():
         yield from bps.mv(
@@ -39,11 +38,15 @@ def setup_reinjection(
         yield from bps.mv(
             frequency_switcher,
             1.0,
-            horizontal_kicker_device,
-            hk_reset_value,
-            vertical_kicker_device,
-            vk_reset_value,
         )
+        # yield from bps.mv(
+        #    horizontal_kicker_device,
+        #    # Todo: shall the kicker value be reset ?
+        #    # I guess not
+        #    hk_reset_value,
+        #    vertical_kicker_device,
+        #    vk_reset_value,
+        # )
 
     return functools.partial(
         reinject_current,
