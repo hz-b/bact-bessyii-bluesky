@@ -21,6 +21,8 @@ from bluesky.callbacks import LiveTable
 from aioca import purge_channel_caches
 
 from bact_bessyii_ophyd_async.devices.pp.topup_engine import TopUpEngine
+from bact_bessyii_mls_ophyd.devices.pp.bpm_collection import BPMCollection
+from bact_bessyii_mls_ophyd.devices.pp.bpm import BPM
 
 
 class DAMeasure(StandardReadable):
@@ -39,8 +41,19 @@ def main(ray_data_file_name: str):
 
     da = DAMeasure(name="da")
 
+    bpm_col = BPMCollection(
+        name="bpm",
+        devices=[
+            BPM(prefix="BPMZ41D1R:", name="bpmz41", select_slice=slice(0, 2000)),
+            BPM(prefix="BPMZ42D1R:", name="bpmz42", select_slice=slice(0, 2000)),
+        ],
+        combine_suffixes=["tbt"],
+    )
+
+
     async def connect():
         await da.connect()
+        await bpm_col.connect()
 
     asyncio.run(connect())
 
@@ -70,12 +83,12 @@ def main(ray_data_file_name: str):
     reinject_plan = setup_reinjection(
         topup_device=da.topup,
         frequency_switcher=da.topup.frq_switch,
-        horizontal_kicker_device=da.hk,
-        vertical_kicker_device=da.vk,
+        horizontal_kicker_device=da.hk.ps,
+        vertical_kicker_device=da.vk.ps,
     )
     (uid,) = RE(
         execute_rays_plan(
-            detectors=[da],
+            detectors=[da,bpm_col],
             horizontal_excitation=da.hk.ps,
             vertical_excitation=da.vk.ps,
             info_signals=info_signals,
