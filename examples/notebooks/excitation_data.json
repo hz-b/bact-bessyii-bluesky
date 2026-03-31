@@ -1,1 +1,1543 @@
-{"col": [{"ray": [{"horizontal": 0.0, "vertical": 0.0}, {"horizontal": 0.2, "vertical": 0.0}, {"horizontal": 0.4, "vertical": 0.0}, {"horizontal": 0.6000000000000001, "vertical": 0.0}, {"horizontal": 0.8, "vertical": 0.0}, {"horizontal": 1.0, "vertical": 0.0}, {"horizontal": 1.2000000000000002, "vertical": 0.0}, {"horizontal": 1.4000000000000001, "vertical": 0.0}, {"horizontal": 1.6, "vertical": 0.0}, {"horizontal": 1.8, "vertical": 0.0}, {"horizontal": 2.0, "vertical": 0.0}, {"horizontal": 2.2, "vertical": 0.0}, {"horizontal": 2.4000000000000004, "vertical": 0.0}, {"horizontal": 2.6, "vertical": 0.0}, {"horizontal": 2.6, "vertical": 0.2}, {"horizontal": 2.8000000000000003, "vertical": 0.0}, {"horizontal": 2.8000000000000003, "vertical": 0.2}, {"horizontal": 3.0, "vertical": 0.0}, {"horizontal": 3.0, "vertical": 0.2}, {"horizontal": 3.1, "vertical": 0.0}, {"horizontal": 3.1, "vertical": 0.2}, {"horizontal": 3.2, "vertical": 0.0}, {"horizontal": 3.2, "vertical": 0.2}, {"horizontal": 3.3, "vertical": 0.0}, {"horizontal": 3.4, "vertical": 0.0}, {"horizontal": 3.5, "vertical": 0.0}, {"horizontal": 3.6, "vertical": 0.0}, {"horizontal": 3.7, "vertical": 0.0}, {"horizontal": 3.8, "vertical": 0.0}, {"horizontal": 3.9, "vertical": 0.0}, {"horizontal": 4.0, "vertical": 0.0}, {"horizontal": 4.1, "vertical": 0.0}, {"horizontal": 4.2, "vertical": 0.0}, {"horizontal": 4.3, "vertical": 0.0}, {"horizontal": 4.4, "vertical": 0.0}, {"horizontal": 4.5, "vertical": 0.0}], "target_angle": 0.0}, {"ray": [{"horizontal": 0.0, "vertical": 0.2}, {"horizontal": 0.0, "vertical": 0.4}, {"horizontal": 0.0, "vertical": 0.6000000000000001}, {"horizontal": 0.0, "vertical": 0.8}, {"horizontal": 0.0, "vertical": 1.0}, {"horizontal": 0.0, "vertical": 1.2000000000000002}, {"horizontal": 0.0, "vertical": 1.4000000000000001}, {"horizontal": 0.0, "vertical": 1.6}, {"horizontal": 0.0, "vertical": 1.8}, {"horizontal": 0.0, "vertical": 2.0}, {"horizontal": 0.0, "vertical": 2.2}, {"horizontal": 0.0, "vertical": 2.4000000000000004}, {"horizontal": 0.0, "vertical": 2.6}, {"horizontal": 0.0, "vertical": 2.8000000000000003}, {"horizontal": 0.0, "vertical": 3.0}, {"horizontal": 0.0, "vertical": 3.1}, {"horizontal": 0.0, "vertical": 3.2}, {"horizontal": 0.0, "vertical": 3.3}, {"horizontal": 0.0, "vertical": 3.4}, {"horizontal": 0.0, "vertical": 3.5}, {"horizontal": 0.0, "vertical": 3.6}, {"horizontal": 0.0, "vertical": 3.7}, {"horizontal": 0.0, "vertical": 3.8}, {"horizontal": 0.0, "vertical": 3.9}, {"horizontal": 0.2, "vertical": 3.9}, {"horizontal": 0.0, "vertical": 4.0}, {"horizontal": 0.2, "vertical": 4.0}, {"horizontal": 0.0, "vertical": 4.1}, {"horizontal": 0.2, "vertical": 4.1}, {"horizontal": 0.0, "vertical": 4.2}, {"horizontal": 0.2, "vertical": 4.2}, {"horizontal": 0.0, "vertical": 4.3}, {"horizontal": 0.2, "vertical": 4.3}, {"horizontal": 0.0, "vertical": 4.4}, {"horizontal": 0.2, "vertical": 4.4}, {"horizontal": 0.0, "vertical": 4.5}], "target_angle": 90.0}, {"ray": [{"horizontal": 0.2, "vertical": 0.2}, {"horizontal": 0.4, "vertical": 0.2}, {"horizontal": 0.4, "vertical": 0.4}, {"horizontal": 0.6000000000000001, "vertical": 0.4}, {"horizontal": 0.6000000000000001, "vertical": 0.6000000000000001}, {"horizontal": 0.8, "vertical": 0.6000000000000001}, {"horizontal": 0.8, "vertical": 0.8}, {"horizontal": 1.0, "vertical": 0.8}, {"horizontal": 0.8, "vertical": 1.0}, {"horizontal": 1.0, "vertical": 1.0}, {"horizontal": 1.2000000000000002, "vertical": 1.0}, {"horizontal": 1.2000000000000002, "vertical": 1.2000000000000002}, {"horizontal": 1.4000000000000001, "vertical": 1.2000000000000002}, {"horizontal": 1.4000000000000001, "vertical": 1.4000000000000001}, {"horizontal": 1.6, "vertical": 1.4000000000000001}, {"horizontal": 1.6, "vertical": 1.6}, {"horizontal": 1.8, "vertical": 1.6}, {"horizontal": 1.8, "vertical": 1.8}, {"horizontal": 2.0, "vertical": 1.8}, {"horizontal": 2.0, "vertical": 2.0}, {"horizontal": 2.2, "vertical": 2.0}, {"horizontal": 2.2, "vertical": 2.2}, {"horizontal": 2.4000000000000004, "vertical": 2.2}, {"horizontal": 2.4000000000000004, "vertical": 2.4000000000000004}, {"horizontal": 2.6, "vertical": 2.4000000000000004}, {"horizontal": 2.6, "vertical": 2.6}, {"horizontal": 2.8000000000000003, "vertical": 2.6}, {"horizontal": 2.8000000000000003, "vertical": 2.8000000000000003}, {"horizontal": 3.0, "vertical": 2.8000000000000003}, {"horizontal": 3.0, "vertical": 3.0}, {"horizontal": 3.1, "vertical": 3.0}, {"horizontal": 3.0, "vertical": 3.1}, {"horizontal": 3.1, "vertical": 3.1}, {"horizontal": 3.2, "vertical": 3.0}, {"horizontal": 3.2, "vertical": 3.1}, {"horizontal": 3.1, "vertical": 3.2}], "target_angle": 45.0}, {"ray": [{"horizontal": 0.6000000000000001, "vertical": 0.2}, {"horizontal": 0.8, "vertical": 0.2}, {"horizontal": 0.8, "vertical": 0.4}, {"horizontal": 1.0, "vertical": 0.4}, {"horizontal": 1.2000000000000002, "vertical": 0.4}, {"horizontal": 1.2000000000000002, "vertical": 0.6000000000000001}, {"horizontal": 1.4000000000000001, "vertical": 0.6000000000000001}, {"horizontal": 1.6, "vertical": 0.6000000000000001}, {"horizontal": 1.6, "vertical": 0.8}, {"horizontal": 1.8, "vertical": 0.8}, {"horizontal": 2.0, "vertical": 0.8}, {"horizontal": 2.2, "vertical": 0.8}, {"horizontal": 2.2, "vertical": 1.0}, {"horizontal": 2.4000000000000004, "vertical": 1.0}, {"horizontal": 2.6, "vertical": 1.0}, {"horizontal": 2.6, "vertical": 1.2000000000000002}, {"horizontal": 2.8000000000000003, "vertical": 1.2000000000000002}, {"horizontal": 3.0, "vertical": 1.2000000000000002}, {"horizontal": 3.1, "vertical": 1.2000000000000002}, {"horizontal": 3.1, "vertical": 1.4000000000000001}, {"horizontal": 3.2, "vertical": 1.2000000000000002}, {"horizontal": 3.2, "vertical": 1.4000000000000001}, {"horizontal": 3.3, "vertical": 1.4000000000000001}, {"horizontal": 3.4, "vertical": 1.4000000000000001}, {"horizontal": 3.5, "vertical": 1.4000000000000001}, {"horizontal": 3.6, "vertical": 1.4000000000000001}, {"horizontal": 3.6, "vertical": 1.6}, {"horizontal": 3.7, "vertical": 1.4000000000000001}, {"horizontal": 3.7, "vertical": 1.6}, {"horizontal": 3.8, "vertical": 1.6}, {"horizontal": 3.9, "vertical": 1.6}, {"horizontal": 4.0, "vertical": 1.6}, {"horizontal": 4.0, "vertical": 1.8}, {"horizontal": 4.1, "vertical": 1.6}, {"horizontal": 4.1, "vertical": 1.8}, {"horizontal": 4.2, "vertical": 1.6}], "target_angle": 22.5}, {"ray": [{"horizontal": 0.2, "vertical": 0.4}, {"horizontal": 0.2, "vertical": 0.6000000000000001}, {"horizontal": 0.2, "vertical": 0.8}, {"horizontal": 0.4, "vertical": 0.8}, {"horizontal": 0.4, "vertical": 1.0}, {"horizontal": 0.4, "vertical": 1.2000000000000002}, {"horizontal": 0.6000000000000001, "vertical": 1.2000000000000002}, {"horizontal": 0.6000000000000001, "vertical": 1.4000000000000001}, {"horizontal": 0.6000000000000001, "vertical": 1.6}, {"horizontal": 0.8, "vertical": 1.6}, {"horizontal": 0.8, "vertical": 1.8}, {"horizontal": 0.8, "vertical": 2.0}, {"horizontal": 0.8, "vertical": 2.2}, {"horizontal": 1.0, "vertical": 2.2}, {"horizontal": 1.0, "vertical": 2.4000000000000004}, {"horizontal": 1.0, "vertical": 2.6}, {"horizontal": 1.2000000000000002, "vertical": 2.6}, {"horizontal": 1.2000000000000002, "vertical": 2.8000000000000003}, {"horizontal": 1.2000000000000002, "vertical": 3.0}, {"horizontal": 1.2000000000000002, "vertical": 3.1}, {"horizontal": 1.4000000000000001, "vertical": 3.1}, {"horizontal": 1.2000000000000002, "vertical": 3.2}, {"horizontal": 1.4000000000000001, "vertical": 3.2}, {"horizontal": 1.4000000000000001, "vertical": 3.3}, {"horizontal": 1.4000000000000001, "vertical": 3.4}, {"horizontal": 1.4000000000000001, "vertical": 3.5}, {"horizontal": 1.4000000000000001, "vertical": 3.6}, {"horizontal": 1.6, "vertical": 3.6}, {"horizontal": 1.4000000000000001, "vertical": 3.7}, {"horizontal": 1.6, "vertical": 3.7}, {"horizontal": 1.6, "vertical": 3.8}, {"horizontal": 1.6, "vertical": 3.9}, {"horizontal": 1.6, "vertical": 4.0}, {"horizontal": 1.6, "vertical": 4.1}, {"horizontal": 1.8, "vertical": 4.1}, {"horizontal": 1.6, "vertical": 4.2}], "target_angle": 67.5}, {"ray": [{"horizontal": 1.0, "vertical": 0.2}, {"horizontal": 1.2000000000000002, "vertical": 0.2}, {"horizontal": 1.4000000000000001, "vertical": 0.2}, {"horizontal": 1.4000000000000001, "vertical": 0.4}, {"horizontal": 1.6, "vertical": 0.2}, {"horizontal": 1.6, "vertical": 0.4}, {"horizontal": 1.8, "vertical": 0.4}, {"horizontal": 2.0, "vertical": 0.4}, {"horizontal": 2.2, "vertical": 0.4}, {"horizontal": 2.4000000000000004, "vertical": 0.4}, {"horizontal": 2.4000000000000004, "vertical": 0.6000000000000001}, {"horizontal": 2.6, "vertical": 0.4}, {"horizontal": 2.6, "vertical": 0.6000000000000001}, {"horizontal": 2.8000000000000003, "vertical": 0.6000000000000001}, {"horizontal": 3.0, "vertical": 0.6000000000000001}, {"horizontal": 3.1, "vertical": 0.6000000000000001}, {"horizontal": 3.2, "vertical": 0.6000000000000001}, {"horizontal": 3.3, "vertical": 0.6000000000000001}, {"horizontal": 3.3, "vertical": 0.8}, {"horizontal": 3.4, "vertical": 0.6000000000000001}, {"horizontal": 3.4, "vertical": 0.8}, {"horizontal": 3.5, "vertical": 0.6000000000000001}, {"horizontal": 3.5, "vertical": 0.8}, {"horizontal": 3.6, "vertical": 0.6000000000000001}, {"horizontal": 3.6, "vertical": 0.8}, {"horizontal": 3.7, "vertical": 0.6000000000000001}, {"horizontal": 3.7, "vertical": 0.8}, {"horizontal": 3.8, "vertical": 0.6000000000000001}, {"horizontal": 3.8, "vertical": 0.8}, {"horizontal": 3.9, "vertical": 0.8}, {"horizontal": 4.0, "vertical": 0.8}, {"horizontal": 4.1, "vertical": 0.8}, {"horizontal": 4.2, "vertical": 0.8}, {"horizontal": 4.3, "vertical": 0.8}, {"horizontal": 4.3, "vertical": 1.0}, {"horizontal": 4.4, "vertical": 0.8}], "target_angle": 11.25}, {"ray": [{"horizontal": 0.4, "vertical": 0.6000000000000001}, {"horizontal": 0.6000000000000001, "vertical": 0.8}, {"horizontal": 0.6000000000000001, "vertical": 1.0}, {"horizontal": 0.8, "vertical": 1.2000000000000002}, {"horizontal": 0.8, "vertical": 1.4000000000000001}, {"horizontal": 1.0, "vertical": 1.4000000000000001}, {"horizontal": 1.0, "vertical": 1.6}, {"horizontal": 1.2000000000000002, "vertical": 1.6}, {"horizontal": 1.2000000000000002, "vertical": 1.8}, {"horizontal": 1.4000000000000001, "vertical": 1.8}, {"horizontal": 1.2000000000000002, "vertical": 2.0}, {"horizontal": 1.4000000000000001, "vertical": 2.0}, {"horizontal": 1.4000000000000001, "vertical": 2.2}, {"horizontal": 1.6, "vertical": 2.2}, {"horizontal": 1.6, "vertical": 2.4000000000000004}, {"horizontal": 1.8, "vertical": 2.4000000000000004}, {"horizontal": 1.6, "vertical": 2.6}, {"horizontal": 1.8, "vertical": 2.6}, {"horizontal": 1.8, "vertical": 2.8000000000000003}, {"horizontal": 2.0, "vertical": 2.8000000000000003}, {"horizontal": 2.0, "vertical": 3.0}, {"horizontal": 2.0, "vertical": 3.1}, {"horizontal": 2.2, "vertical": 3.0}, {"horizontal": 2.0, "vertical": 3.2}, {"horizontal": 2.2, "vertical": 3.1}, {"horizontal": 2.2, "vertical": 3.2}, {"horizontal": 2.2, "vertical": 3.3}, {"horizontal": 2.2, "vertical": 3.4}, {"horizontal": 2.4000000000000004, "vertical": 3.3}, {"horizontal": 2.2, "vertical": 3.5}, {"horizontal": 2.4000000000000004, "vertical": 3.4}, {"horizontal": 2.4000000000000004, "vertical": 3.5}, {"horizontal": 2.4000000000000004, "vertical": 3.6}, {"horizontal": 2.4000000000000004, "vertical": 3.7}, {"horizontal": 2.6, "vertical": 3.6}, {"horizontal": 2.4000000000000004, "vertical": 3.8}], "target_angle": 56.25}, {"ray": [{"horizontal": 1.0, "vertical": 0.6000000000000001}, {"horizontal": 1.2000000000000002, "vertical": 0.8}, {"horizontal": 1.4000000000000001, "vertical": 0.8}, {"horizontal": 1.4000000000000001, "vertical": 1.0}, {"horizontal": 1.6, "vertical": 1.0}, {"horizontal": 1.6, "vertical": 1.2000000000000002}, {"horizontal": 1.8, "vertical": 1.0}, {"horizontal": 1.8, "vertical": 1.2000000000000002}, {"horizontal": 1.8, "vertical": 1.4000000000000001}, {"horizontal": 2.0, "vertical": 1.2000000000000002}, {"horizontal": 2.0, "vertical": 1.4000000000000001}, {"horizontal": 2.2, "vertical": 1.4000000000000001}, {"horizontal": 2.2, "vertical": 1.6}, {"horizontal": 2.4000000000000004, "vertical": 1.4000000000000001}, {"horizontal": 2.4000000000000004, "vertical": 1.6}, {"horizontal": 2.4000000000000004, "vertical": 1.8}, {"horizontal": 2.6, "vertical": 1.6}, {"horizontal": 2.6, "vertical": 1.8}, {"horizontal": 2.8000000000000003, "vertical": 1.8}, {"horizontal": 2.8000000000000003, "vertical": 2.0}, {"horizontal": 3.0, "vertical": 2.0}, {"horizontal": 3.1, "vertical": 2.0}, {"horizontal": 3.0, "vertical": 2.2}, {"horizontal": 3.2, "vertical": 2.0}, {"horizontal": 3.1, "vertical": 2.2}, {"horizontal": 3.2, "vertical": 2.2}, {"horizontal": 3.3, "vertical": 2.2}, {"horizontal": 3.4, "vertical": 2.2}, {"horizontal": 3.3, "vertical": 2.4000000000000004}, {"horizontal": 3.5, "vertical": 2.2}, {"horizontal": 3.4, "vertical": 2.4000000000000004}, {"horizontal": 3.5, "vertical": 2.4000000000000004}, {"horizontal": 3.6, "vertical": 2.4000000000000004}, {"horizontal": 3.7, "vertical": 2.4000000000000004}, {"horizontal": 3.6, "vertical": 2.6}, {"horizontal": 3.8, "vertical": 2.4000000000000004}], "target_angle": 33.75}, {"ray": [{"horizontal": 0.2, "vertical": 1.0}, {"horizontal": 0.2, "vertical": 1.2000000000000002}, {"horizontal": 0.2, "vertical": 1.4000000000000001}, {"horizontal": 0.4, "vertical": 1.4000000000000001}, {"horizontal": 0.2, "vertical": 1.6}, {"horizontal": 0.4, "vertical": 1.6}, {"horizontal": 0.4, "vertical": 1.8}, {"horizontal": 0.4, "vertical": 2.0}, {"horizontal": 0.4, "vertical": 2.2}, {"horizontal": 0.4, "vertical": 2.4000000000000004}, {"horizontal": 0.6000000000000001, "vertical": 2.4000000000000004}, {"horizontal": 0.4, "vertical": 2.6}, {"horizontal": 0.6000000000000001, "vertical": 2.6}, {"horizontal": 0.6000000000000001, "vertical": 2.8000000000000003}, {"horizontal": 0.6000000000000001, "vertical": 3.0}, {"horizontal": 0.6000000000000001, "vertical": 3.1}, {"horizontal": 0.6000000000000001, "vertical": 3.2}, {"horizontal": 0.6000000000000001, "vertical": 3.3}, {"horizontal": 0.8, "vertical": 3.3}, {"horizontal": 0.6000000000000001, "vertical": 3.4}, {"horizontal": 0.8, "vertical": 3.4}, {"horizontal": 0.6000000000000001, "vertical": 3.5}, {"horizontal": 0.8, "vertical": 3.5}, {"horizontal": 0.6000000000000001, "vertical": 3.6}, {"horizontal": 0.8, "vertical": 3.6}, {"horizontal": 0.6000000000000001, "vertical": 3.7}, {"horizontal": 0.8, "vertical": 3.7}, {"horizontal": 0.6000000000000001, "vertical": 3.8}, {"horizontal": 0.8, "vertical": 3.8}, {"horizontal": 0.8, "vertical": 3.9}, {"horizontal": 0.8, "vertical": 4.0}, {"horizontal": 0.8, "vertical": 4.1}, {"horizontal": 0.8, "vertical": 4.2}, {"horizontal": 0.8, "vertical": 4.3}, {"horizontal": 1.0, "vertical": 4.3}, {"horizontal": 0.8, "vertical": 4.4}], "target_angle": 78.75}, {"ray": [{"horizontal": 1.8, "vertical": 0.2}, {"horizontal": 2.0, "vertical": 0.2}, {"horizontal": 2.2, "vertical": 0.2}, {"horizontal": 2.4000000000000004, "vertical": 0.2}, {"horizontal": 2.8000000000000003, "vertical": 0.4}, {"horizontal": 3.0, "vertical": 0.4}, {"horizontal": 3.1, "vertical": 0.4}, {"horizontal": 3.2, "vertical": 0.4}, {"horizontal": 3.3, "vertical": 0.2}, {"horizontal": 3.3, "vertical": 0.4}, {"horizontal": 3.4, "vertical": 0.2}, {"horizontal": 3.4, "vertical": 0.4}, {"horizontal": 3.5, "vertical": 0.2}, {"horizontal": 3.5, "vertical": 0.4}, {"horizontal": 3.6, "vertical": 0.2}, {"horizontal": 3.6, "vertical": 0.4}, {"horizontal": 3.7, "vertical": 0.2}, {"horizontal": 3.7, "vertical": 0.4}, {"horizontal": 3.8, "vertical": 0.2}, {"horizontal": 3.8, "vertical": 0.4}, {"horizontal": 3.9, "vertical": 0.2}, {"horizontal": 3.9, "vertical": 0.4}, {"horizontal": 3.9, "vertical": 0.6000000000000001}, {"horizontal": 4.0, "vertical": 0.2}, {"horizontal": 4.0, "vertical": 0.4}, {"horizontal": 4.0, "vertical": 0.6000000000000001}, {"horizontal": 4.1, "vertical": 0.2}, {"horizontal": 4.1, "vertical": 0.4}, {"horizontal": 4.1, "vertical": 0.6000000000000001}, {"horizontal": 4.2, "vertical": 0.2}, {"horizontal": 4.2, "vertical": 0.4}, {"horizontal": 4.2, "vertical": 0.6000000000000001}, {"horizontal": 4.3, "vertical": 0.4}, {"horizontal": 4.3, "vertical": 0.6000000000000001}, {"horizontal": 4.4, "vertical": 0.4}, {"horizontal": 4.4, "vertical": 0.6000000000000001}], "target_angle": 5.625}, {"ray": [{"horizontal": 1.0, "vertical": 1.2000000000000002}, {"horizontal": 1.2000000000000002, "vertical": 1.4000000000000001}, {"horizontal": 1.0, "vertical": 1.8}, {"horizontal": 1.4000000000000001, "vertical": 1.6}, {"horizontal": 1.6, "vertical": 1.8}, {"horizontal": 1.2000000000000002, "vertical": 2.2}, {"horizontal": 1.6, "vertical": 2.0}, {"horizontal": 1.8, "vertical": 2.0}, {"horizontal": 1.4000000000000001, "vertical": 2.4000000000000004}, {"horizontal": 1.8, "vertical": 2.2}, {"horizontal": 2.0, "vertical": 2.2}, {"horizontal": 2.0, "vertical": 2.4000000000000004}, {"horizontal": 2.2, "vertical": 2.4000000000000004}, {"horizontal": 2.0, "vertical": 2.6}, {"horizontal": 2.2, "vertical": 2.6}, {"horizontal": 2.4000000000000004, "vertical": 2.6}, {"horizontal": 2.2, "vertical": 2.8000000000000003}, {"horizontal": 2.4000000000000004, "vertical": 2.8000000000000003}, {"horizontal": 2.6, "vertical": 2.8000000000000003}, {"horizontal": 2.4000000000000004, "vertical": 3.0}, {"horizontal": 2.4000000000000004, "vertical": 3.1}, {"horizontal": 2.6, "vertical": 3.0}, {"horizontal": 2.4000000000000004, "vertical": 3.2}, {"horizontal": 2.6, "vertical": 3.1}, {"horizontal": 2.8000000000000003, "vertical": 3.0}, {"horizontal": 2.6, "vertical": 3.2}, {"horizontal": 2.8000000000000003, "vertical": 3.1}, {"horizontal": 2.6, "vertical": 3.3}, {"horizontal": 2.8000000000000003, "vertical": 3.2}, {"horizontal": 2.6, "vertical": 3.4}, {"horizontal": 2.8000000000000003, "vertical": 3.3}, {"horizontal": 2.6, "vertical": 3.5}, {"horizontal": 3.0, "vertical": 3.2}, {"horizontal": 2.8000000000000003, "vertical": 3.4}, {"horizontal": 3.0, "vertical": 3.3}, {"horizontal": 2.8000000000000003, "vertical": 3.5}], "target_angle": 50.625}, {"ray": [{"horizontal": 1.8, "vertical": 0.6000000000000001}, {"horizontal": 2.0, "vertical": 1.0}, {"horizontal": 2.2, "vertical": 1.2000000000000002}, {"horizontal": 2.4000000000000004, "vertical": 1.2000000000000002}, {"horizontal": 2.6, "vertical": 1.4000000000000001}, {"horizontal": 2.8000000000000003, "vertical": 1.4000000000000001}, {"horizontal": 2.8000000000000003, "vertical": 1.6}, {"horizontal": 3.0, "vertical": 1.4000000000000001}, {"horizontal": 3.0, "vertical": 1.6}, {"horizontal": 3.1, "vertical": 1.6}, {"horizontal": 3.0, "vertical": 1.8}, {"horizontal": 3.2, "vertical": 1.6}, {"horizontal": 3.1, "vertical": 1.8}, {"horizontal": 3.3, "vertical": 1.6}, {"horizontal": 3.2, "vertical": 1.8}, {"horizontal": 3.4, "vertical": 1.6}, {"horizontal": 3.3, "vertical": 1.8}, {"horizontal": 3.4, "vertical": 1.8}, {"horizontal": 3.5, "vertical": 1.6}, {"horizontal": 3.3, "vertical": 2.0}, {"horizontal": 3.5, "vertical": 1.8}, {"horizontal": 3.4, "vertical": 2.0}, {"horizontal": 3.6, "vertical": 1.8}, {"horizontal": 3.5, "vertical": 2.0}, {"horizontal": 3.7, "vertical": 1.8}, {"horizontal": 3.6, "vertical": 2.0}, {"horizontal": 3.8, "vertical": 1.8}, {"horizontal": 3.7, "vertical": 2.0}, {"horizontal": 3.6, "vertical": 2.2}, {"horizontal": 3.8, "vertical": 2.0}, {"horizontal": 3.9, "vertical": 1.8}, {"horizontal": 3.7, "vertical": 2.2}, {"horizontal": 3.9, "vertical": 2.0}, {"horizontal": 3.8, "vertical": 2.2}, {"horizontal": 4.0, "vertical": 2.0}, {"horizontal": 3.9, "vertical": 2.2}], "target_angle": 28.125}, {"ray": [{"horizontal": 0.6000000000000001, "vertical": 1.8}, {"horizontal": 0.6000000000000001, "vertical": 2.0}, {"horizontal": 0.6000000000000001, "vertical": 2.2}, {"horizontal": 0.8, "vertical": 2.4000000000000004}, {"horizontal": 0.8, "vertical": 2.6}, {"horizontal": 0.8, "vertical": 2.8000000000000003}, {"horizontal": 1.0, "vertical": 2.8000000000000003}, {"horizontal": 0.8, "vertical": 3.0}, {"horizontal": 1.0, "vertical": 3.0}, {"horizontal": 0.8, "vertical": 3.1}, {"horizontal": 1.0, "vertical": 3.1}, {"horizontal": 0.8, "vertical": 3.2}, {"horizontal": 1.0, "vertical": 3.2}, {"horizontal": 1.0, "vertical": 3.3}, {"horizontal": 1.2000000000000002, "vertical": 3.3}, {"horizontal": 1.0, "vertical": 3.4}, {"horizontal": 1.2000000000000002, "vertical": 3.4}, {"horizontal": 1.0, "vertical": 3.5}, {"horizontal": 1.2000000000000002, "vertical": 3.5}, {"horizontal": 1.0, "vertical": 3.6}, {"horizontal": 1.2000000000000002, "vertical": 3.6}, {"horizontal": 1.0, "vertical": 3.7}, {"horizontal": 1.2000000000000002, "vertical": 3.7}, {"horizontal": 1.0, "vertical": 3.8}, {"horizontal": 1.2000000000000002, "vertical": 3.8}, {"horizontal": 1.0, "vertical": 3.9}, {"horizontal": 1.2000000000000002, "vertical": 3.9}, {"horizontal": 1.0, "vertical": 4.0}, {"horizontal": 1.4000000000000001, "vertical": 3.9}, {"horizontal": 1.2000000000000002, "vertical": 4.0}, {"horizontal": 1.4000000000000001, "vertical": 4.0}, {"horizontal": 1.2000000000000002, "vertical": 4.1}, {"horizontal": 1.4000000000000001, "vertical": 4.1}, {"horizontal": 1.2000000000000002, "vertical": 4.2}, {"horizontal": 1.4000000000000001, "vertical": 4.2}, {"horizontal": 1.2000000000000002, "vertical": 4.3}], "target_angle": 73.125}, {"ray": [{"horizontal": 2.0, "vertical": 0.6000000000000001}, {"horizontal": 2.2, "vertical": 0.6000000000000001}, {"horizontal": 2.4000000000000004, "vertical": 0.8}, {"horizontal": 2.6, "vertical": 0.8}, {"horizontal": 2.8000000000000003, "vertical": 0.8}, {"horizontal": 2.8000000000000003, "vertical": 1.0}, {"horizontal": 3.0, "vertical": 0.8}, {"horizontal": 3.0, "vertical": 1.0}, {"horizontal": 3.1, "vertical": 0.8}, {"horizontal": 3.1, "vertical": 1.0}, {"horizontal": 3.2, "vertical": 0.8}, {"horizontal": 3.2, "vertical": 1.0}, {"horizontal": 3.3, "vertical": 1.0}, {"horizontal": 3.3, "vertical": 1.2000000000000002}, {"horizontal": 3.4, "vertical": 1.0}, {"horizontal": 3.4, "vertical": 1.2000000000000002}, {"horizontal": 3.5, "vertical": 1.0}, {"horizontal": 3.5, "vertical": 1.2000000000000002}, {"horizontal": 3.6, "vertical": 1.0}, {"horizontal": 3.6, "vertical": 1.2000000000000002}, {"horizontal": 3.7, "vertical": 1.0}, {"horizontal": 3.7, "vertical": 1.2000000000000002}, {"horizontal": 3.8, "vertical": 1.0}, {"horizontal": 3.8, "vertical": 1.2000000000000002}, {"horizontal": 3.9, "vertical": 1.0}, {"horizontal": 3.9, "vertical": 1.2000000000000002}, {"horizontal": 4.0, "vertical": 1.0}, {"horizontal": 3.9, "vertical": 1.4000000000000001}, {"horizontal": 4.0, "vertical": 1.2000000000000002}, {"horizontal": 4.1, "vertical": 1.0}, {"horizontal": 4.0, "vertical": 1.4000000000000001}, {"horizontal": 4.1, "vertical": 1.2000000000000002}, {"horizontal": 4.1, "vertical": 1.4000000000000001}, {"horizontal": 4.2, "vertical": 1.2000000000000002}, {"horizontal": 4.2, "vertical": 1.4000000000000001}, {"horizontal": 4.3, "vertical": 1.2000000000000002}], "target_angle": 16.875}, {"ray": [{"horizontal": 1.0, "vertical": 2.0}, {"horizontal": 1.2000000000000002, "vertical": 2.4000000000000004}, {"horizontal": 1.4000000000000001, "vertical": 2.6}, {"horizontal": 1.4000000000000001, "vertical": 2.8000000000000003}, {"horizontal": 1.6, "vertical": 2.8000000000000003}, {"horizontal": 1.4000000000000001, "vertical": 3.0}, {"horizontal": 1.6, "vertical": 3.0}, {"horizontal": 1.6, "vertical": 3.1}, {"horizontal": 1.8, "vertical": 3.0}, {"horizontal": 1.6, "vertical": 3.2}, {"horizontal": 1.8, "vertical": 3.1}, {"horizontal": 1.6, "vertical": 3.3}, {"horizontal": 1.8, "vertical": 3.2}, {"horizontal": 1.6, "vertical": 3.4}, {"horizontal": 1.8, "vertical": 3.3}, {"horizontal": 1.8, "vertical": 3.4}, {"horizontal": 1.6, "vertical": 3.5}, {"horizontal": 2.0, "vertical": 3.3}, {"horizontal": 1.8, "vertical": 3.5}, {"horizontal": 2.0, "vertical": 3.4}, {"horizontal": 1.8, "vertical": 3.6}, {"horizontal": 2.0, "vertical": 3.5}, {"horizontal": 1.4000000000000001, "vertical": 3.8}, {"horizontal": 1.8, "vertical": 3.7}, {"horizontal": 2.0, "vertical": 3.6}, {"horizontal": 1.8, "vertical": 3.8}, {"horizontal": 2.0, "vertical": 3.7}, {"horizontal": 2.2, "vertical": 3.6}, {"horizontal": 2.0, "vertical": 3.8}, {"horizontal": 1.8, "vertical": 3.9}, {"horizontal": 2.2, "vertical": 3.7}, {"horizontal": 2.0, "vertical": 3.9}, {"horizontal": 1.8, "vertical": 4.0}, {"horizontal": 2.2, "vertical": 3.8}, {"horizontal": 2.0, "vertical": 4.0}, {"horizontal": 2.2, "vertical": 3.9}], "target_angle": 61.875}, {"ray": [{"horizontal": 2.0, "vertical": 1.6}, {"horizontal": 2.2, "vertical": 1.8}, {"horizontal": 2.4000000000000004, "vertical": 2.0}, {"horizontal": 2.6, "vertical": 2.0}, {"horizontal": 2.6, "vertical": 2.2}, {"horizontal": 2.8000000000000003, "vertical": 2.2}, {"horizontal": 2.8000000000000003, "vertical": 2.4000000000000004}, {"horizontal": 3.0, "vertical": 2.4000000000000004}, {"horizontal": 3.1, "vertical": 2.4000000000000004}, {"horizontal": 3.0, "vertical": 2.6}, {"horizontal": 3.2, "vertical": 2.4000000000000004}, {"horizontal": 3.1, "vertical": 2.6}, {"horizontal": 3.2, "vertical": 2.6}, {"horizontal": 3.1, "vertical": 2.8000000000000003}, {"horizontal": 3.3, "vertical": 2.6}, {"horizontal": 3.2, "vertical": 2.8000000000000003}, {"horizontal": 3.4, "vertical": 2.6}, {"horizontal": 3.3, "vertical": 2.8000000000000003}, {"horizontal": 3.5, "vertical": 2.6}, {"horizontal": 3.4, "vertical": 2.8000000000000003}, {"horizontal": 3.3, "vertical": 3.0}, {"horizontal": 3.5, "vertical": 2.8000000000000003}], "target_angle": 39.375}, {"ray": [{"horizontal": 0.2, "vertical": 1.8}, {"horizontal": 0.2, "vertical": 2.0}, {"horizontal": 0.2, "vertical": 2.2}, {"horizontal": 0.2, "vertical": 2.4000000000000004}, {"horizontal": 0.2, "vertical": 2.6}, {"horizontal": 0.2, "vertical": 2.8000000000000003}, {"horizontal": 0.4, "vertical": 2.8000000000000003}, {"horizontal": 0.2, "vertical": 3.0}, {"horizontal": 0.4, "vertical": 3.0}, {"horizontal": 0.2, "vertical": 3.1}, {"horizontal": 0.4, "vertical": 3.1}, {"horizontal": 0.2, "vertical": 3.2}, {"horizontal": 0.4, "vertical": 3.2}, {"horizontal": 0.2, "vertical": 3.3}, {"horizontal": 0.4, "vertical": 3.3}, {"horizontal": 0.2, "vertical": 3.4}, {"horizontal": 0.4, "vertical": 3.4}, {"horizontal": 0.2, "vertical": 3.5}, {"horizontal": 0.4, "vertical": 3.5}, {"horizontal": 0.2, "vertical": 3.6}, {"horizontal": 0.4, "vertical": 3.6}, {"horizontal": 0.2, "vertical": 3.7}, {"horizontal": 0.4, "vertical": 3.7}, {"horizontal": 0.2, "vertical": 3.8}, {"horizontal": 0.4, "vertical": 3.8}, {"horizontal": 0.4, "vertical": 3.9}, {"horizontal": 0.4, "vertical": 4.0}, {"horizontal": 0.6000000000000001, "vertical": 4.0}, {"horizontal": 0.4, "vertical": 4.1}, {"horizontal": 0.6000000000000001, "vertical": 4.1}, {"horizontal": 0.4, "vertical": 4.2}, {"horizontal": 0.6000000000000001, "vertical": 4.2}, {"horizontal": 0.4, "vertical": 4.3}, {"horizontal": 0.6000000000000001, "vertical": 4.3}, {"horizontal": 0.4, "vertical": 4.4}, {"horizontal": 0.6000000000000001, "vertical": 4.4}], "target_angle": 84.375}]}
+{
+  "col": [
+    {
+      "ray": [
+        {
+          "horizontal": 0.0,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 5.6,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 5.800000000000001,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 6.0,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 6.2,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 6.4,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 6.6,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 6.800000000000001,
+          "vertical": 0.0
+        },
+        {
+          "horizontal": 7.0,
+          "vertical": 0.0
+        }
+      ],
+      "target_angle": 0.0
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 0.0,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 0.0,
+          "vertical": 5.0
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 5.0
+        }
+      ],
+      "target_angle": 90.0
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 0.5,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 4.800000000000001
+        }
+      ],
+      "target_angle": 45.0
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 1.0,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 5.6,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 5.6,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 5.800000000000001,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 6.0,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 6.0,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 6.2,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 6.2,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 6.4,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 6.4,
+          "vertical": 2.8
+        }
+      ],
+      "target_angle": 22.5
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 0.5,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 5.0
+        }
+      ],
+      "target_angle": 67.5
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 2.0,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 5.6,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 5.800000000000001,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 6.0,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 6.2,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 6.2,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 6.4,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 6.4,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 6.6,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 6.800000000000001,
+          "vertical": 1.5
+        }
+      ],
+      "target_angle": 11.25
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 1.5,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 5.0
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 5.0
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 5.0
+        }
+      ],
+      "target_angle": 56.25
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 1.5,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 5.6,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 5.6,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 5.800000000000001,
+          "vertical": 3.8
+        }
+      ],
+      "target_angle": 33.75
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 0.5,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 0.5,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 1.0,
+          "vertical": 5.0
+        },
+        {
+          "horizontal": 1.5,
+          "vertical": 5.0
+        }
+      ],
+      "target_angle": 78.75
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 3.0,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 5.6,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 5.800000000000001,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 6.0,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 6.2,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 6.4,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 6.6,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 6.6,
+          "vertical": 1.0
+        },
+        {
+          "horizontal": 6.800000000000001,
+          "vertical": 0.5
+        },
+        {
+          "horizontal": 6.800000000000001,
+          "vertical": 1.0
+        }
+      ],
+      "target_angle": 5.625
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 2.0,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 5.0
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 5.0
+        }
+      ],
+      "target_angle": 50.625
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 3.0,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 5.6,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 5.800000000000001,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 5.800000000000001,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 6.0,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 6.0,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 6.2,
+          "vertical": 3.2
+        }
+      ],
+      "target_angle": 28.125
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 4.2,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 5.6,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 5.6,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 5.800000000000001,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 5.800000000000001,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 6.0,
+          "vertical": 1.5
+        },
+        {
+          "horizontal": 5.800000000000001,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 6.0,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 6.0,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 6.2,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 6.2,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 6.4,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 6.4,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 6.4,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 6.6,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 6.6,
+          "vertical": 2.2
+        }
+      ],
+      "target_angle": 73.125
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 2.0,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 2.0,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 4.6
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 4.800000000000001
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 5.0
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 5.0
+        }
+      ],
+      "target_angle": 16.875
+    },
+    {
+      "ray": [
+        {
+          "horizontal": 2.5,
+          "vertical": 2.0
+        },
+        {
+          "horizontal": 2.5,
+          "vertical": 2.2
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 2.4
+        },
+        {
+          "horizontal": 3.0,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 3.2,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 2.6
+        },
+        {
+          "horizontal": 3.4,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 2.8
+        },
+        {
+          "horizontal": 3.6,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 3.0
+        },
+        {
+          "horizontal": 3.8,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 3.2
+        },
+        {
+          "horizontal": 4.0,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 3.4000000000000004
+        },
+        {
+          "horizontal": 4.2,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 4.4,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 3.6
+        },
+        {
+          "horizontal": 4.6,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 3.8
+        },
+        {
+          "horizontal": 4.8,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 4.0
+        },
+        {
+          "horizontal": 5.0,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 4.2
+        },
+        {
+          "horizontal": 5.2,
+          "vertical": 4.4
+        },
+        {
+          "horizontal": 5.4,
+          "vertical": 4.4
+        }
+      ],
+      "target_angle": 61.875
+    }
+  ]
+}
