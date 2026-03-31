@@ -35,6 +35,11 @@ def setup_reinjection(
         )
 
     def after_injection():
+       # A bit extra wait to avoid that the topup engine is still
+        # busy.  now the device should check that the topup engine is not busy
+        # This does still not work ... so lets wait a bit and see if it is
+        # sufficient then
+        yield from bps.sleep(2.0)
         yield from bps.mv(
             frequency_switcher,
             1.0,
