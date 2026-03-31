@@ -19,6 +19,7 @@ def execute_rays_plan(
     rays: ExcitationCollection,
     reinject_plan,
     go_on: Callable[[Mapping[str, Reading]], bool],
+    n_samples: int,
     md: Dict=None,
 ):
     """ """
@@ -43,6 +44,7 @@ def execute_rays_plan(
             rays=rays,
             reinject_plan=reinject_plan,
             go_on=go_on,
+            n_samples=n_samples,
         )
 
     r = yield from inner()
@@ -57,6 +59,7 @@ def dynamic_aperture_rays_plan(
     rays: ExcitationCollection,
     go_on: Callable[[Mapping[str, Reading]], bool],
     reinject_plan,
+        n_samples,
 ):
 
     assert callable(reinject_plan)
@@ -71,6 +74,7 @@ def dynamic_aperture_rays_plan(
             info_signals=info_signals,
             ray=ray,
             go_on=go_on,
+            n_samples=n_samples
         )
 
 
